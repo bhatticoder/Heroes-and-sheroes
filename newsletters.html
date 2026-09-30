@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Heroes &amp; Sheros | Newsletters</title>
+<meta name="description" content="Heroes and Sheros Magazine newsletter designs: issue dispatch, nominations call and podcast edition.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lora:ital,wght@0,400;1,400&family=Archivo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#101D45;--gold:#C2A353;--ink:#1C2333;--grey:#6E7385;--line:#E4DCC8}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#EDE7D8;color:var(--ink);font:16px/1.7 Lora,Georgia,serif;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--navy)}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;margin:0;line-height:1.1}
+.kick{font:800 11.5px/1.5 Archivo,sans-serif;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+.samp{font:800 10px/1 Archivo,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--grey);padding:5px 8px;white-space:nowrap}
+.ph{font:700 12px/1.4 Archivo,sans-serif;color:#B04020;border-bottom:1px dashed #B04020}
+.cap{font:400 12.5px/1.55 Archivo,sans-serif;color:var(--grey);margin-top:8px}
+.cap .imgnote{font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:10px;color:var(--navy);background:#EDE3C8;padding:2px 6px}
+.topbar{position:sticky;top:0;z-index:50;background:var(--navy);color:#fff;display:flex;justify-content:space-between;gap:14px;align-items:center;padding:9px 20px;font:800 11.5px/1.4 Archivo,sans-serif;letter-spacing:.16em;text-transform:uppercase;flex-wrap:wrap}
+.topbar a{color:var(--gold);text-decoration:none}
+.notice{background:#FBF7EC;border-bottom:1px solid var(--line);font:400 13.5px/1.6 Archivo,sans-serif;padding:11px 20px;color:#4A4F60}
+.notice b{color:var(--navy);text-transform:uppercase;letter-spacing:.1em;font-size:12px}
+.pgsec{max-width:700px;margin:44px auto 30px;background:#fff;border:1px solid var(--line);box-shadow:0 12px 34px rgba(16,29,69,.08);padding:0 0 30px;position:relative}
+.ptab{position:absolute;top:-12px;left:22px;background:var(--navy);color:#fff;font:800 10.5px/1 Archivo,sans-serif;letter-spacing:.2em;text-transform:uppercase;padding:9px 14px}
+.secwrap{max-width:1040px;margin:0 auto;padding:56px 24px 30px}
+.sechead{border-bottom:3px solid var(--navy);padding-bottom:14px;margin-bottom:6px}
+.sechead h2{font-size:clamp(26px,3.4vw,36px);margin-top:6px}
+.sechead p{margin:8px 0 0;color:var(--grey);font-size:15.5px}
+.mailframe{border:1px solid var(--line);background:#fff;margin-top:26px}
+.mailhead{background:var(--navy);color:#fff;padding:14px 20px;font:400 13px/1.7 Archivo,sans-serif}
+.mailhead b{font-weight:800;letter-spacing:.06em}
+.mailbody{padding:30px 30px 34px}
+.em-brand{text-align:center;border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:22px}
+.em-brand .logo{display:inline-block;background:#fff;border:1px solid var(--line);padding:7px 9px}
+.em-brand .logo img{width:54px;height:54px;object-fit:contain}
+.em-brand .name{font:900 24px/1.2 "Playfair Display",serif;margin-top:10px}
+.em-brand .tag{font:800 10.5px/1.6 Archivo,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+.em-hero img{width:100%;height:230px;object-fit:cover}
+.em-h{font-size:clamp(23px,3vw,30px);margin:22px 0 4px}
+.em-p{font-size:16px;line-height:1.75;margin:14px 0}
+.em-btn{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;font:800 12px/1 Archivo,sans-serif;letter-spacing:.2em;text-transform:uppercase;padding:16px 26px;margin-top:10px}
+.em-btn:hover{background:#1B2E6B}
+.em-btn.gold{background:var(--gold);color:#241C07}
+.em-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
+.em-card{border:1px solid var(--line);padding:16px 16px 18px;background:#FCFAF4}
+.em-card b{display:block;font:900 16px/1.3 "Playfair Display",serif;margin-bottom:6px}
+.em-card span{font:400 13.5px/1.6 Archivo,sans-serif;color:#4A4F60}
+.em-quote{border-left:4px solid var(--gold);padding:6px 0 6px 18px;margin:22px 0;font:italic 400 19px/1.6 Lora,serif;color:var(--navy)}
+.em-foot{border-top:1px solid var(--line);margin-top:26px;padding-top:16px;font:400 12.5px/1.8 Archivo,sans-serif;color:var(--grey)}
+.em-foot b{color:var(--navy)}
+.em-strip{background:var(--navy);color:#fff;text-align:center;padding:14px;font:800 11px/1.7 Archivo,sans-serif;letter-spacing:.24em;text-transform:uppercase}
+.em-strip .gold{color:var(--gold)}
+.notes{max-width:1040px;margin:0 auto;padding:10px 24px 70px}
+.notes h3{font-size:24px;margin-bottom:10px}
+.notes ul{margin:0;padding-left:20px}
+.notes li{font-size:15.5px;line-height:1.75;margin-bottom:9px}
+.pgnav{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--navy);display:flex;justify-content:center;gap:10px;align-items:center;padding:10px 14px;flex-wrap:wrap}
+.pgnav button,.pgnav a{font:800 10.5px/1 Archivo,sans-serif;letter-spacing:.16em;text-transform:uppercase;background:transparent;color:#fff;border:1px solid rgba(255,255,255,.5);padding:9px 15px;cursor:pointer;text-decoration:none}
+.pgnav button:hover,.pgnav a:hover{background:var(--gold);border-color:var(--gold);color:#241C07}
+.pgnav .count{font:800 10.5px/1 Archivo,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);padding:0 8px}
+@media(max-width:760px){.em-grid{grid-template-columns:1fr}.mailbody{padding:22px 18px 26px}.em-hero img{height:180px}}
+</style>
+</head>
+<body>
+<header class="topbar">
+<a href="index.html">Heroes &amp; Sheros | Presentation hub</a>
+<span>Newsletter designs | 3 editions</span>
+<a href="index.html">All concepts</a>
+</header>
+<div class="notice"><b>Design review mockup:</b> newsletter copy is sample text built on the client's content master; facts are sourced, quotes marked "sample" await sign-off. Photography is licensed stock standing in for the client's permission-cleared images. Send-from name and editorial address are to confirm.</div>
+
+<div class="secwrap">
+<div class="sechead">
+<div class="kick">Email program | Premiere Issue</div>
+<h2>Newsletters</h2>
+<p>Three editions carry the magazine between issues: the dispatch when an issue lands, the nominations call that keeps readers involved, and the podcast edition. Same masthead, same rules on sourcing, one voice.</p>
+</div>
+<div class="mailframe">
+<div class="mailhead"><b>Subject:</b> Issue 01 is live: The Honors Edition &nbsp;|&nbsp; <b>From:</b> Heroes &amp; Sheros Magazine</div>
+<div class="mailbody">
+<div class="em-brand">
+<div class="logo"><img src="assets/hh-logo.jpg" alt="Heroes and Sheros HH diamond logo"></div>
+<div class="name">Heroes &amp; Sheros</div>
+<div class="tag">Giving Honor Where Honor Is Due</div>
+</div>
+<div class="em-hero">
+<img src="assets/img/cover-community.jpg" alt="Volunteers gathering outdoors on a clear morning">
+<div class="cap">Cover of Issue 01. <span class="imgnote">Layout image</span></div>
+</div>
+<div class="kick em-kick" style="margin-top:20px">Issue 01 | The Honors Edition</div>
+<h3 class="em-h">The magazine is live</h3>
+<p class="em-p">Our first issue is open for reading. Inside: the Tim Tebow Foundation's fight against human trafficking in three parts, the story of Intrada Westside, and what the official record says about Fostering the Future. Every article carries its sources.</p>
+<div class="em-grid">
+<div class="em-card"><b>Cover Story</b><span>Faith, hope and love, and a three-part fight against trafficking.</span></div>
+<div class="em-card"><b>Hero &amp; Shero</b><span>143 homes, one ribbon, and what happens after the speeches.</span></div>
+</div>
+<div class="em-quote">"People who make a difference deserve to be seen, heard, and honored." <span class="samp">Sample</span></div>
+<a class="em-btn" href="concept-1-premium-editorial.html">Read Issue 01</a>
+<div class="em-foot">
+<b>Heroes &amp; Sheros Magazine</b> | Online now, paper edition January 2027<br>
+Editorial office: <span class="ph">contact email to confirm</span><br>
+You receive this because you subscribed at heroesandsheros.com. <b>Manage preferences</b> or <b>unsubscribe</b>.<br>
+Photography is licensed stock for layout; facts checked against the content master.
+</div>
+</div>
+<div class="em-strip">Premiere Issue <span class="gold">|</span> heroesandsheros.com</div>
+</div>
+</div>
+
+<div class="secwrap" style="padding-top:10px">
+<div class="mailframe">
+<div class="mailhead"><b>Subject:</b> Who deserves honor? Nominations are open &nbsp;|&nbsp; <b>From:</b> Heroes &amp; Sheros Magazine</div>
+<div class="mailbody">
+<div class="em-brand">
+<div class="logo"><img src="assets/hh-logo.jpg" alt="Heroes and Sheros HH diamond logo"></div>
+<div class="name">Heroes &amp; Sheros</div>
+<div class="tag">Giving Honor Where Honor Is Due</div>
+</div>
+<div class="em-hero">
+<img src="assets/img/teacher-05.jpg" alt="A teacher working with students in a classroom">
+<div class="cap">Everyday heroes, nominated by the people they help. <span class="imgnote">Layout image</span></div>
+</div>
+<div class="kick em-kick" style="margin-top:20px">Issue 02 nominations</div>
+<h3 class="em-h">Tell us who shows up</h3>
+<p class="em-p">Issue 02 is about Everyday Heroes, and we would rather find them through you than through a press release. Nominate a teacher, first responder, veteran, foster parent, caregiver, mentor or neighbor who deserves recognition.</p>
+<p class="em-p">Nominations are reviewed by the editorial office before anything is published, and every nominee is contacted before we run a word.</p>
+<a class="em-btn gold" href="index.html">Nominate a hero or shero</a>
+<div class="em-foot">
+<b>Heroes &amp; Sheros Magazine</b> | Nominations close when Issue 02 closes<br>
+Editorial office: <span class="ph">contact email to confirm</span><br>
+You receive this because you subscribed at heroesandsheros.com. <b>Manage preferences</b> or <b>unsubscribe</b>.
+</div>
+</div>
+<div class="em-strip">Issue 02: Everyday Heroes <span class="gold">|</span> Coming next</div>
+</div>
+<div class="mailframe" style="margin-top:34px">
+<div class="mailhead"><b>Subject:</b> Heroic Hearts is coming soon &nbsp;|&nbsp; <b>From:</b> Heroes &amp; Sheros Magazine</div>
+<div class="mailbody">
+<div class="em-brand">
+<div class="logo"><img src="assets/hh-logo.jpg" alt="Heroes and Sheros HH diamond logo"></div>
+<div class="name">Heroes &amp; Sheros</div>
+<div class="tag">Giving Honor Where Honor Is Due</div>
+</div>
+<div class="em-hero">
+<img src="assets/img/podcast.jpg" alt="A microphone in a recording studio">
+<div class="cap">The Heroic Hearts recording room. <span class="imgnote">Layout image</span></div>
+</div>
+<div class="kick em-kick" style="margin-top:20px">Media | Audio</div>
+<h3 class="em-h">Heroic Hearts podcast coming soon</h3>
+<p class="em-p">The magazine is going into your headphones. Heroic Hearts is a companion audio series: longer conversations with the people behind the stories, recorded after the print interview ends. Guests, schedule and subscription links arrive with Issue 02.</p>
+<div class="em-quote">"Every guest has a story the article could not fit." <span class="samp">Sample line</span></div>
+<a class="em-btn" href="index.html">Get the launch note</a>
+<div class="em-foot">
+<b>Heroes &amp; Sheros Magazine</b> | Heroic Hearts, in development<br>
+Editorial office: <span class="ph">contact email to confirm</span><br>
+You receive this because you subscribed at heroesandsheros.com. <b>Manage preferences</b> or <b>unsubscribe</b>.
+</div>
+</div>
+<div class="em-strip">Heroic Hearts <span class="gold">|</span> Coming soon</div>
+</div>
+</div>
+
+<div class="notes">
+<h3>How these are built</h3>
+<ul>
+<li>Single column, 600px wide, with system-safe fallbacks so the layout holds in Outlook, Apple Mail and Gmail.</li>
+<li>The masthead repeats at the top of every edition, and the strip at the foot carries the issue line. Unsubscribe and preference links appear in every send, as the rules require.</li>
+<li>Copy leads with a person or a number, never with a slogan. Claim-level sourcing stays in the article, not the email.</li>
+<li>Photography is licensed stock for layout. At launch, each image is swapped for the client's permission-cleared photo and credited in the caption.</li>
+<li>Send-from name, editorial address and subscription links are marked to confirm before the first send.</li>
+</ul>
+</div>
+
+<nav class="pgnav" id="pgnav" aria-label="Page navigation">
+<span class="count">Newsletter designs | 3 editions</span>
+<a href="index.html">Presentation hub</a>
+<a href="website-framework.html">Website framework</a>
+<a href="concept-1-premium-editorial.html">Concept 1</a>
+</nav>
+</body>
+</html>

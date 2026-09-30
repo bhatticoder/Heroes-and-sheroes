@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Heroes &amp; Sheros | Website Framework</title>
+<meta name="description" content="Heroes and Sheros Magazine website framework: homepage, sections, article template and footer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lora:ital,wght@0,400;1,400&family=Archivo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#101D45;--gold:#C2A353;--ink:#1C2333;--grey:#6E7385;--line:#E4DCC8;--ivory:#F7F2E6}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink);font:16.5px/1.75 Lora,Georgia,serif;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--navy)}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;margin:0;line-height:1.12}
+.kick{font:800 11.5px/1.5 Archivo,sans-serif;letter-spacing:.26em;text-transform:uppercase;color:var(--gold)}
+.samp{font:800 10px/1 Archivo,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--grey);padding:5px 8px;white-space:nowrap}
+.ph{font:700 12px/1.4 Archivo,sans-serif;color:#B04020;border-bottom:1px dashed #B04020}
+.cap{font:400 12.5px/1.55 Archivo,sans-serif;color:var(--grey);margin-top:8px}
+.cap .imgnote{font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:10px;color:var(--navy);background:#EDE3C8;padding:2px 6px}
+.topbar{position:sticky;top:0;z-index:50;background:var(--navy);color:#fff;display:flex;justify-content:space-between;gap:14px;align-items:center;padding:9px 20px;font:800 11.5px/1.4 Archivo,sans-serif;letter-spacing:.16em;text-transform:uppercase;flex-wrap:wrap}
+.topbar a{color:var(--gold);text-decoration:none}
+.notice{background:var(--ivory);border-bottom:1px solid var(--line);font:400 13.5px/1.6 Archivo,sans-serif;padding:11px 20px;color:#4A4F60}
+.notice b{color:var(--navy);text-transform:uppercase;letter-spacing:.1em;font-size:12px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.sitenav{border-bottom:1px solid var(--line);padding:16px 0;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+.sitenav .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.sitenav .brand img{width:44px;height:44px;object-fit:contain}
+.sitenav .brand b{font:900 20px/1.1 "Playfair Display",serif;color:var(--navy)}
+.sitenav .brand span{display:block;font:800 9.5px/1.5 Archivo,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.sitenav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.sitenav ul a{font:800 12px/1.4 Archivo,sans-serif;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--ink)}
+.sitenav ul a:hover{color:var(--gold)}
+.sitenav .cta{background:var(--gold);color:#241C07;padding:12px 18px;text-decoration:none;font:800 12px/1 Archivo,sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.hero{position:relative;min-height:520px;display:flex;align-items:flex-end;overflow:hidden;background:var(--navy)}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+.hero .htext{position:relative;z-index:2;padding:56px 0 46px;color:#fff}
+.hero .htext h1{font-size:clamp(38px,6vw,64px);margin-top:10px;color:#fff}
+.hero .htext p{font-size:18px;line-height:1.75;max-width:640px;color:#E7E2D4}
+.hero .cta{display:inline-block;background:var(--gold);color:#241C07;text-decoration:none;font:800 12.5px/1 Archivo,sans-serif;letter-spacing:.18em;text-transform:uppercase;padding:17px 28px;margin-top:8px}
+.hero .cta.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.7);margin-left:10px}
+section.block{padding:54px 0;border-bottom:1px solid var(--line)}
+.blockhead{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;border-bottom:3px solid var(--navy);padding-bottom:12px;margin-bottom:24px}
+.blockhead h2{font-size:clamp(24px,3vw,32px)}
+.blockhead a{font:800 11.5px/1.4 Archivo,sans-serif;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--gold)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{border:1px solid var(--line);background:#FCFAF4;padding:0 0 18px}
+.card img{height:160px;width:100%;object-fit:cover}
+.card .cbody{padding:16px 16px 0}
+.card .kick{font-size:10.5px}
+.card b{display:block;font:900 18px/1.3 "Playfair Display",serif;margin:7px 0 6px}
+.card span{font:400 14px/1.6 Archivo,sans-serif;color:#4A4F60}
+.card a{display:inline-block;margin-top:10px;font:800 11px/1 Archivo,sans-serif;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--navy);border-bottom:2px solid var(--gold);padding-bottom:3px}
+.strux{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.strux .sbox{border:1px solid var(--line);padding:22px}
+.strux .sbox h3{font-size:20px;margin-bottom:10px}
+.strux ul{margin:0;padding-left:18px}
+.strux li{font:400 14.5px/1.8 Archivo,sans-serif;color:#4A4F60}
+.strux .ph{font-size:11.5px}
+.article{border:1px solid var(--line);padding:34px;max-width:760px;margin:0 auto;background:#fff}
+.article .crumb{font:800 11px/1.5 Archivo,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--grey)}
+.article h3{font-size:clamp(26px,3.4vw,36px);margin:10px 0 8px}
+.article .meta{font:600 13px/1.6 Archivo,sans-serif;color:var(--grey);border-bottom:1px solid var(--line);padding-bottom:14px}
+.article .dek{font:italic 400 19px/1.7 Lora,serif;color:var(--navy);margin:18px 0 4px}
+.article p{font-size:16.5px;line-height:1.8}
+.article .srcbox{background:var(--ivory);border-left:4px solid var(--gold);padding:14px 16px;font:400 13.5px/1.7 Archivo,sans-serif;margin-top:20px}
+.article .srcbox b{color:var(--navy)}
+footer.site{background:var(--navy);color:#DDD8CA;padding:48px 0 34px;margin-top:10px}
+footer.site .fgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:30px}
+footer.site h4{font:800 11.5px/1.5 Archivo,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin:0 0 14px}
+footer.site ul{list-style:none;margin:0;padding:0}
+footer.site li{font:400 14.5px/2 Archivo,sans-serif}
+footer.site a{color:#DDD8CA;text-decoration:none}
+footer.site a:hover{color:var(--gold)}
+footer.site .fbrand b{display:block;font:900 24px/1.2 "Playfair Display",serif;color:#fff}
+footer.site .fbrand span{font:800 10.5px/1.8 Archivo,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+footer.site .legal{border-top:1px solid rgba(255,255,255,.2);margin-top:32px;padding-top:18px;font:400 12.5px/1.8 Archivo,sans-serif;color:#A9A496}
+footer.site .legal .ph{color:#F0C9A0;border-color:#F0C9A0}
+.pgnav{position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(16,29,69,.97);display:flex;justify-content:center;gap:10px;align-items:center;padding:10px 14px;flex-wrap:wrap}
+.pgnav a{font:800 10.5px/1 Archivo,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#fff;border:1px solid rgba(255,255,255,.5);padding:9px 15px;text-decoration:none}
+.pgnav a:hover{background:var(--gold);border-color:var(--gold);color:#241C07}
+.pgnav .count{font:800 10.5px/1 Archivo,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);padding:0 8px}
+@media(max-width:900px){
+.cards,.strux,footer.site .fgrid{grid-template-columns:1fr}
+.hero .htext{padding:44px 0 36px}
+.article{padding:24px 18px}
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+<a href="index.html">Heroes &amp; Sheros | Presentation hub</a>
+<span>Website framework | Home, sections, article</span>
+<a href="index.html">All concepts</a>
+</header>
+<div class="notice"><b>Design review mockup:</b> site copy is sample text built on the client's content master; facts are sourced, quotes marked "sample" await sign-off. Photography is licensed stock standing in for the client's permission-cleared images.</div>
+
+<div class="wrap">
+<nav class="sitenav">
+<a class="brand" href="#top">
+<img src="assets/hh-logo.jpg" alt="Heroes and Sheros HH diamond logo">
+<b>Heroes &amp; Sheros<span>Giving Honor Where Honor Is Due</span></b>
+</a>
+<ul>
+<li><a href="#stories">Stories</a></li>
+<li><a href="#honorees">Honorees</a></li>
+<li><a href="#nominate">Nominate</a></li>
+<li><a href="#podcast">Podcast</a></li>
+<li><a href="#article">Article template</a></li>
+</ul>
+<a class="cta" href="#nominate">Nominate a hero</a>
+</nav>
+</div>
+
+<header class="hero" id="top">
+<img src="assets/img/cover-community.jpg" alt="Volunteers gathering outdoors on a clear morning">
+<div class="wrap">
+<div class="htext">
+<div class="kick">Heroes &amp; Sheros Magazine</div>
+<h1>People who make a difference deserve to be seen, heard, and honored.</h1>
+<p>An online magazine honoring individuals, organizations, families, professionals and everyday people whose actions show compassion, courage, service or perseverance. Paper edition January 2027.</p>
+<a class="cta" href="#stories">Read Issue 01</a>
+<a class="cta ghost" href="#nominate">Nominate a hero or shero</a>
+</div>
+</div>
+</header>
+<div class="wrap">
+
+<section class="block" id="stories">
+<div class="blockhead"><h2>Stories from Issue 01</h2><a href="concept-1-premium-editorial.html">Open the issue</a></div>
+<div class="cards">
+<div class="card">
+<img src="assets/img/church.jpg" alt="A white chapel under a bright sky">
+<div class="cbody">
+<div class="kick">Cover Story</div>
+<b>Serving the most vulnerable</b>
+<span>The Tim Tebow Foundation's work against trafficking in three parts: prevent, rescue, care.</span>
+<a href="concept-1-premium-editorial.html">Read the story</a>
+</div>
+</div>
+<div class="card">
+<img src="assets/img/homes.jpg" alt="A freshly painted house with workers outside">
+<div class="cbody">
+<div class="kick">Hero &amp; Shero</div>
+<b>The block behind the ribbon</b>
+<span>Intrada Westside: 143 affordable homes, 25 supportive units, one November morning.</span>
+<a href="concept-1-premium-editorial.html">Read the story</a>
+</div>
+</div>
+<div class="card">
+<img src="assets/img/interview.jpg" alt="An interview in progress">
+<div class="cbody">
+<div class="kick">The Interview</div>
+<b>Fostering the Future</b>
+<span>What the official record shows about the order of November 2025 and the accounts of June 2026.</span>
+<a href="concept-1-premium-editorial.html">Read the story</a>
+</div>
+</div>
+</div>
+<div class="cap">Story cards link to the article template below. Images are layout stock pending the honoree shoot.</div>
+</section>
+
+<section class="block" id="honorees">
+<div class="blockhead"><h2>Honoree index</h2><a href="#nominate">Nominate someone</a></div>
+<div class="strux">
+<div class="sbox">
+<h3>How a honoree page reads</h3>
+<ul>
+<li>Name, one-line role, and the city they serve.</li>
+<li>A verified biography in three paragraphs, with dates checked against public record.</li>
+<li>The nominator's story, published only with permission and a contact trail.</li>
+<li>Portrait with credit and usage permission noted in the caption.</li>
+</ul>
+</div>
+<div class="sbox">
+<h3>Editorial rules on the page</h3>
+<ul>
+<li>No honoree is published before the editorial office confirms the facts.</li>
+<li>Corrections run on the page, dated, with the old wording archived.</li>
+<li>Current political figures appear as factual reporting with sourcing, without endorsement.</li>
+<li>Any quote awaiting sign-off stays marked <span class="samp">Sample</span> in mockups.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="block" id="nominate">
+<div class="blockhead"><h2>Nominate a hero or shero</h2><a href="newsletters.html">See the nominations email</a></div>
+<div class="strux">
+<div class="sbox">
+<h3>The form asks four things</h3>
+<ul>
+<li>The nominee's name, role and city.</li>
+<li>What they did, in your own words, with a date if you remember one.</li>
+<li>How you know them, and how the editorial office can reach you.</li>
+<li>Whether we may publish your name as the nominator.</li>
+</ul>
+</div>
+<div class="sbox">
+<h3>What happens next</h3>
+<ul>
+<li>The editorial office reviews every nomination before anything is published.</li>
+<li>We contact the nominee before a word runs. <span class="ph">form and confirmation flow to confirm</span></li>
+<li>Published honorees appear in the issue index and stay in the archive.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="block" id="podcast">
+<div class="blockhead"><h2>Heroic Hearts podcast</h2><a href="newsletters.html">Launch note edition</a></div>
+<div class="strux">
+<div class="sbox">
+<h3>Coming soon</h3>
+<ul>
+<li>A companion audio series recorded after the print interview ends.</li>
+<li>Guest list, schedule and subscription links announced with Issue 02.</li>
+<li>Episodes carry the same sourcing rules as the articles.</li>
+</ul>
+</div>
+<div class="sbox">
+<h3>Where it lives</h3>
+<ul>
+<li>A podcast page under Media, with episodes, transcripts and credits.</li>
+<li>Apple, Spotify and YouTube feeds <span class="ph">links to confirm at launch</span>.</li>
+<li>Back issues linked from every episode show note.</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="block" id="article">
+<div class="blockhead"><h2>Article template</h2><a href="#top">Back to top</a></div>
+<article class="article">
+<div class="crumb">Stories / Cover Story / Issue 01</div>
+<h3>Serving the most vulnerable</h3>
+<div class="meta">Heroes &amp; Sheros staff | Sourced from the foundation's public record | <span class="samp">Sample copy</span></div>
+<p class="dek">Founded in 2010, the Tim Tebow Foundation describes its mission as bringing faith, hope and love to people facing some of the darkest times in their lives.</p>
+<p>Every article on the site follows one shape: a headline that names the subject, a byline with the reporting basis, a standfirst that states the verified fact, then the story in full. Images carry captions with credit and permission status, and the piece ends with its sources in a box readers can check.</p>
+<p>The template keeps politics on the factual side of the line. Stories about current political figures run as reporting with clear sourcing and no endorsement, and corrections appear dated on the same page.</p>
+<div class="srcbox"><b>Sources:</b> Tim Tebow Foundation official site; The White House releases of November 2025 and June 2026; Atlanta Housing records on Intrada Westside. <span class="ph">live links to confirm at launch</span></div>
+</article>
+<div class="cap" style="max-width:760px;margin:14px auto 0">Full-page article view, with related stories and share row below the sources box at launch.</div>
+</section>
+
+</div>
+
+<footer class="site">
+<div class="wrap">
+<div class="fgrid">
+<div class="fbrand">
+<b>Heroes &amp; Sheros</b>
+<span>Giving Honor Where Honor Is Due</span>
+<p style="font:400 14.5px/1.8 Archivo,sans-serif;margin-top:14px">An online magazine honoring individuals, organizations, families, professionals and everyday people. Paper edition January 2027.</p>
+</div>
+<div>
+<h4>Read</h4>
+<ul>
+<li><a href="concept-1-premium-editorial.html">Issue 01: The Honors Edition</a></li>
+<li><a href="website-framework.html#stories">Stories</a></li>
+<li><a href="website-framework.html#honorees">Honoree index</a></li>
+<li><a href="website-framework.html#article">Article template</a></li>
+</ul>
+</div>
+<div>
+<h4>Take part</h4>
+<ul>
+<li><a href="website-framework.html#nominate">Nominate a hero or shero</a></li>
+<li><a href="newsletters.html">Newsletters</a></li>
+<li><a href="website-framework.html#podcast">Heroic Hearts podcast</a></li>
+<li>Editorial office: <span class="ph">contact email to confirm</span></li>
+</ul>
+</div>
+</div>
+<div class="legal">
+<b>Heroes &amp; Sheros Magazine</b> | heroesandsheros.com | Premiere Issue 2026<br>
+Photography in this mockup is licensed stock for layout only. Facts checked against the client's content master and cited sources.<br>
+Corrections policy: dated notes on the article page, with the original wording archived.
+</div>
+</div>
+</footer>
+
+<nav class="pgnav" aria-label="Presentation navigation">
+<span class="count">Website framework</span>
+<a href="index.html">Presentation hub</a>
+<a href="concept-1-premium-editorial.html">Concept 1</a>
+<a href="newsletters.html">Newsletters</a>
+</nav>
+</body>
+</html>

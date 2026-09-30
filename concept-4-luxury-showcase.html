@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Heroes &amp; Sheros | Concept 4: Luxury Showcase</title>
+<meta name="description" content="Heroes and Sheros Magazine presentation concept four, a luxury showcase art direction.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+--noir:#0E0E10;
+--coal:#17171A;
+--ivory:#F5F1E8;
+--champagne:#C9A96A;
+--champagne-lt:#E7D4A8;
+--grey:#8B8B8F;
+--line:#2C2C31;
+--line-lt:#DED7C7;
+--max:1140px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--noir);color:var(--ivory);font:300 16.5px/1.8 Jost,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--champagne)}
+h1,h2,h3{font-family:Cormorant,Georgia,serif;font-weight:500;line-height:1.08;margin:0}
+.kick{font:500 11px/1.6 Jost,sans-serif;letter-spacing:.34em;text-transform:uppercase;color:var(--champagne)}
+.samp{font:500 10px/1 Jost,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--noir);background:var(--champagne);padding:5px 9px;white-space:nowrap}
+.ph{font:400 12px/1.4 Jost,sans-serif;color:var(--champagne-lt);border-bottom:1px dotted var(--champagne)}
+.cap{font:italic 400 13.5px/1.6 Cormorant,serif;color:#9C9689;margin-top:9px;letter-spacing:.02em}
+.cap .imgnote{font-style:normal;font:500 9.5px/1 Jost,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--champagne);border:1px solid var(--line);padding:4px 7px}
+/* topbar + notice */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(14,14,16,.97);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:14px;align-items:center;padding:10px 24px;font:400 11px/1.4 Jost,sans-serif;letter-spacing:.24em;text-transform:uppercase;flex-wrap:wrap}
+.topbar a{color:var(--champagne);text-decoration:none}
+.notice{background:var(--coal);border-bottom:1px solid var(--line);color:#A9A49A;font:300 13.5px/1.65 Jost,sans-serif;padding:12px 24px;letter-spacing:.02em}
+.notice b{color:var(--champagne);text-transform:uppercase;letter-spacing:.14em;font-weight:500;font-size:11.5px}
+/* page frame */
+.pgsec{max-width:var(--max);margin:32px auto;background:var(--coal);border:1px solid var(--line);padding:64px 68px 84px;position:relative}
+.ptab{position:absolute;top:-1px;left:-1px;background:var(--champagne);color:var(--noir);font:500 10.5px/1 Jost,sans-serif;letter-spacing:.24em;text-transform:uppercase;padding:10px 18px}
+.folio{position:absolute;left:68px;right:68px;bottom:24px;display:flex;justify-content:space-between;font:300 11.5px/1.4 Jost,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#6E6E73;border-top:1px solid var(--line);padding-top:13px}
+.folio span:nth-child(2){color:var(--champagne)}
+.rule{display:flex;align-items:center;gap:14px;margin:22px 0}
+.rule::before,.rule::after{content:"";height:1px;background:var(--line);flex:1}
+.rule i{width:7px;height:7px;background:var(--champagne);transform:rotate(45deg);display:block}
+/* cover */
+.pgsec.cover{padding:0;border:0;background:transparent;max-width:1240px}
+.covercard{position:relative;min-height:800px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;border:1px solid var(--line)}
+.covercard>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.85}
+.coverwash{position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,14,16,.82),rgba(14,14,16,.28) 46%,rgba(14,14,16,.92))}
+.covertop,.coverbottom{position:relative;z-index:2;padding:38px 46px}
+.covertop{display:flex;justify-content:space-between;gap:22px;align-items:flex-start;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:20px}
+.logoplate{background:rgba(245,241,232,.94);padding:10px 12px}
+.logoplate img{width:60px;height:60px;object-fit:contain}
+.wordmark{font:500 clamp(38px,5.2vw,62px)/1 Cormorant,serif;letter-spacing:.14em;text-transform:uppercase;color:#fff}
+.wordmark span{display:block;font:300 12.5px/1.7 Jost,sans-serif;letter-spacing:.4em;color:var(--champagne-lt);margin-top:8px;text-transform:uppercase}
+.issuechip{font:300 11px/1.9 Jost,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--champagne-lt);border:1px solid rgba(201,169,106,.7);padding:14px 18px;text-align:right}
+.coverbottom{display:grid;grid-template-columns:1.5fr 1fr;gap:38px;align-items:end}
+.coverlines .cl+.cl{margin-top:20px;padding-top:18px;border-top:1px solid rgba(245,241,232,.25)}
+.coverlines .who{font:400 10.5px/1.6 Jost,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--champagne-lt)}
+.coverlines b{display:block;font:500 clamp(24px,3vw,35px)/1.24 Cormorant,serif;color:#fff;margin-top:8px;letter-spacing:.02em}
+.inset{background:rgba(245,241,232,.96);padding:14px 14px 16px;box-shadow:0 26px 60px rgba(0,0,0,.55)}
+.inset img{height:165px;width:100%;object-fit:cover;filter:sepia(.18)}
+.inset .cap{margin:11px 4px 0;color:#57524A}
+.coverbar{position:relative;z-index:2;background:var(--champagne);color:var(--noir);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:16px 46px;font:500 11px/1.4 Jost,sans-serif;letter-spacing:.28em;text-transform:uppercase}
+/* contents */
+.toc{display:grid;grid-template-columns:1.5fr 1fr;gap:46px;margin-top:32px}
+.tocrow{display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:baseline;padding:17px 0;border-bottom:1px solid var(--line)}
+.tocrow:first-child{border-top:1px solid var(--line)}
+.tocrow .n{font:400 20px/1 Cormorant,serif;color:var(--champagne);letter-spacing:.1em}
+.tocrow .t b{display:block;font:500 21px/1.35 Cormorant,serif;letter-spacing:.03em;color:var(--ivory)}
+.tocrow .t span{font:300 13.5px/1.6 Jost,sans-serif;color:#8B8B8F;letter-spacing:.06em}
+.tocrow .p{font:300 13px/1 Jost,sans-serif;letter-spacing:.14em;color:var(--champagne)}
+.picks{border:1px solid var(--champagne);padding:32px 28px;background:rgba(201,169,106,.06);align-self:start}
+.picks h4{font:500 24px/1.3 Cormorant,serif;color:var(--champagne-lt);margin:0 0 16px;letter-spacing:.06em}
+.picks p{font:300 14.5px/1.75 Jost,sans-serif;margin:0 0 14px;color:#C9C4BA;letter-spacing:.03em}
+.picks .by{font:400 11px/1.6 Jost,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--champagne)}
+/* editor note */
+.letter{display:grid;grid-template-columns:1.6fr 1fr;gap:48px;margin-top:26px}
+.letter .body{font-family:Cormorant,serif;font-size:21px;line-height:1.85;font-weight:400}
+.letter .body p{margin:0 0 22px}
+.letter .body .lead{font-style:italic;color:var(--champagne-lt);font-size:23px}
+.sig{margin-top:30px;border-top:1px solid var(--line);padding-top:20px}
+.sig b{display:block;font:500 19px/1.4 Cormorant,serif;letter-spacing:.14em;text-transform:uppercase;color:var(--ivory)}
+.sig span{font:300 12.5px/1.7 Jost,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--grey)}
+.mastheadbox{border:1px solid var(--line);padding:26px;background:var(--noir)}
+.mastheadbox h4{font:500 12px/1.4 Jost,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--champagne);margin:0 0 16px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.mastheadbox li{list-style:none;display:flex;justify-content:space-between;gap:12px;font:300 14px/1.6 Jost,sans-serif;padding:11px 0;border-bottom:1px dashed var(--line)}
+.mastheadbox li:last-child{border-bottom:0}
+.mastheadbox li b{font-weight:500;letter-spacing:.06em;color:var(--ivory)}
+.mastheadbox li span{color:var(--grey);text-align:right;letter-spacing:.04em}
+/* feature */
+.hero{position:relative;min-height:540px;overflow:hidden;margin-top:28px;display:flex;align-items:flex-end;border:1px solid var(--line)}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.9}
+.hero .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,14,16,.08),rgba(14,14,16,.9))}
+.hero .htext{position:relative;z-index:2;padding:46px;max-width:860px}
+.hero .htext h2{font-size:clamp(36px,5vw,60px);margin-top:12px;color:#fff;letter-spacing:.03em}
+.hero .cap{position:absolute;right:24px;top:22px;z-index:2;background:rgba(14,14,16,.85);border:1px solid var(--line);padding:9px 14px;max-width:310px}
+.storysplit{display:grid;grid-template-columns:1.4fr .9fr;gap:46px;margin-top:36px}
+.storysplit .main{font-size:17.5px;line-height:1.9;color:#D9D4C9}
+.storysplit .main p{margin:0 0 21px}
+.byline{font:300 11.5px/1.6 Jost,sans-serif;letter-spacing:.26em;text-transform:uppercase;color:var(--grey);padding-bottom:15px;border-bottom:1px solid var(--line);margin:18px 0}
+.byline em{color:var(--champagne);font-style:normal}
+.asidecard{border:1px solid var(--line);background:var(--noir);padding:28px;align-self:start}
+.asidecard h4{font:500 12px/1.4 Jost,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--champagne);margin:0 0 16px}
+.asidecard table{width:100%;border-collapse:collapse;font:300 14px/1.6 Jost,sans-serif}
+.asidecard td{padding:11px 0;border-bottom:1px dashed var(--line);vertical-align:top;color:#C9C4BA}
+.asidecard td:first-child{font-weight:500;color:var(--champagne-lt);padding-right:14px;white-space:nowrap;letter-spacing:.06em}
+.asidecard .cap{margin-top:15px}
+.pull{border-top:1px solid var(--champagne);border-bottom:1px solid var(--champagne);padding:26px 0;margin:30px 0;font:italic 400 28px/1.5 Cormorant,serif;color:var(--champagne-lt);text-align:center}
+.pull span{display:block;font:400 10.5px/1.7 Jost,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--grey);font-style:normal;margin-top:12px}
+.src{font:300 13px/1.75 Jost,sans-serif;color:#8B8B8F;letter-spacing:.03em}
+.src b{color:var(--champagne);font-weight:500}
+/* photo page */
+.photohero{position:relative;min-height:680px;overflow:hidden;margin-top:26px;display:flex;align-items:flex-end;border:1px solid var(--line)}
+.photohero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.photohero .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,14,16,.05),rgba(14,14,16,.88))}
+.photohero .ptext{position:relative;z-index:2;padding:46px;max-width:780px}
+.photohero .ptext h2{font-size:clamp(32px,4.6vw,52px);margin-top:10px;color:#fff}
+.photohero .ptext p{font-size:16.5px;line-height:1.85;color:#CFCAC0}
+.photohero .cap{position:absolute;right:24px;top:22px;z-index:2;background:rgba(14,14,16,.85);border:1px solid var(--line);padding:9px 14px;max-width:310px}
+/* interview */
+.talk{display:grid;grid-template-columns:.9fr 1.2fr;gap:46px;margin-top:32px}
+.talk .side img{width:100%;height:100%;min-height:430px;object-fit:cover;border:1px solid var(--line);filter:grayscale(.35)}
+.talk .side .cap{margin-top:13px}
+.qa .q{font:500 27px/1.32 Cormorant,serif;color:var(--champagne-lt);margin:28px 0 9px;letter-spacing:.04em}
+.qa .a{font-size:16.5px;line-height:1.85;padding-left:22px;border-left:1px solid var(--champagne);color:#D9D4C9}
+.qa .a .samp{margin-left:9px;vertical-align:2px}
+.qa p{font-size:16.5px;line-height:1.85;color:#D9D4C9}
+/* quote bank */
+.quotebank{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:32px}
+.qblock{border:1px solid var(--line);padding:38px 34px;background:var(--noir)}
+.qblock .qt{font:italic 400 clamp(24px,3vw,33px)/1.5 Cormorant,serif;color:var(--ivory)}
+.qblock .qb{font:400 10.5px/1.8 Jost,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:var(--champagne);margin-top:20px}
+.qblock.gold{background:linear-gradient(150deg,#1E1A12,#17171A 70%);border-color:var(--champagne)}
+.qblock.gold .qt{color:var(--champagne-lt)}
+.qblock.wide{grid-column:1/-1;display:grid;grid-template-columns:.85fr 1.15fr;gap:34px;align-items:center;padding:24px}
+.qblock.wide img{height:100%;min-height:250px;width:100%;object-fit:cover;filter:grayscale(.3)}
+/* closing */
+.closegrid{display:grid;grid-template-columns:1.2fr 1fr;gap:46px;margin-top:30px}
+.nextlist{margin:0;padding:0}
+.nextlist li{list-style:none;border-bottom:1px solid var(--line);padding:17px 0;font-size:16px;line-height:1.75;color:#D9D4C9}
+.nextlist li:first-child{border-top:1px solid var(--line)}
+.nextlist b{font:500 18px/1.4 Cormorant,serif;letter-spacing:.06em;color:var(--champagne-lt);text-transform:uppercase;display:block}
+.actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:28px}
+.actions a{font:400 11.5px/1 Jost,sans-serif;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;background:var(--champagne);color:var(--noir);padding:18px 28px;transition:.15s}
+.actions a:hover{background:var(--champagne-lt)}
+.actions a.alt{background:transparent;color:var(--champagne);border:1px solid var(--champagne)}
+.actions a.alt:hover{background:var(--champagne);color:var(--noir)}
+.colophon{border:1px solid var(--line);background:var(--noir);padding:32px 28px;font:300 14.5px/1.9 Jost,sans-serif;letter-spacing:.05em;color:#B9B4AA}
+.colophon b{color:var(--champagne);font-weight:500;letter-spacing:.12em;text-transform:uppercase;font-size:13px}
+.colophon .ph{color:var(--champagne-lt);border-color:var(--champagne-lt)}
+.podcastcard{border:1px solid var(--champagne);background:rgba(201,169,106,.08);padding:28px 26px;margin-bottom:26px}
+.podcastcard h4{font:500 27px/1.25 Cormorant,serif;color:var(--champagne-lt);margin:0 0 9px;letter-spacing:.05em}
+.podcastcard p{font:300 14.5px/1.75 Jost,sans-serif;margin:0;color:#C9C4BA;letter-spacing:.03em}
+/* page navigation */
+.pgnav{position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(14,14,16,.97);border-top:1px solid var(--champagne);display:flex;justify-content:center;gap:12px;align-items:center;padding:12px 14px;flex-wrap:wrap}
+.pgnav button,.pgnav a{font:400 10.5px/1 Jost,sans-serif;letter-spacing:.22em;text-transform:uppercase;background:transparent;color:var(--ivory);border:1px solid var(--line);padding:11px 18px;cursor:pointer;text-decoration:none}
+.pgnav button:hover,.pgnav a:hover{background:var(--champagne);border-color:var(--champagne);color:var(--noir)}
+.pgnav .count{font:400 10.5px/1 Jost,sans-serif;letter-spacing:.26em;text-transform:uppercase;color:var(--champagne);padding:0 10px}
+@media(max-width:960px){
+.pgsec{padding:52px 28px 76px;margin:22px 12px}
+.folio{left:28px;right:28px}
+.toc,.letter,.storysplit,.talk,.closegrid,.quotebank{grid-template-columns:1fr;gap:28px}
+.qblock.wide{grid-template-columns:1fr}
+.covercard{min-height:660px}
+.covertop,.coverbottom{padding:30px 26px}
+.coverbar{padding:15px 26px}
+.coverbottom{grid-template-columns:1fr}
+.inset{max-width:320px}
+.hero{min-height:430px}
+.hero .htext,.photohero .ptext{padding:30px}
+.photohero{min-height:540px}
+.talk .side img{min-height:310px}
+}
+@media(max-width:640px){
+.tocrow{grid-template-columns:auto 1fr}
+.tocrow .p{display:none}
+.folio span:nth-child(2){display:none}
+.wordmark{letter-spacing:.06em}
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+<a href="index.html">Heroes &amp; Sheros | Presentation hub</a>
+<span>Concept 4 of 4 | Luxury Showcase</span>
+<a href="index.html">All concepts</a>
+</header>
+<div class="notice"><b>Design review mockup:</b> editorial copy is sample text built on the client's content master; facts are sourced, quotes marked "sample" await sign-off. Photography is licensed stock standing in for the client's permission-cleared images.</div>
+
+<section class="pgsec cover" id="p1" data-title="Cover">
+<div class="covercard">
+<img src="assets/img/cover-community.jpg" alt="Volunteers gathering outdoors on a clear morning">
+<div class="coverwash"></div>
+<div class="covertop">
+<div class="brand">
+<div class="logoplate"><img src="assets/hh-logo.jpg" alt="Heroes and Sheros HH diamond logo"></div>
+<div class="wordmark">Heroes &amp; Sheros<span>Giving Honor Where Honor Is Due</span></div>
+</div>
+<div class="issuechip">Premiere Issue 01<br>The Honors Edition<br>2026</div>
+</div>
+<div class="coverbottom">
+<div class="coverlines">
+<div class="cl"><div class="who">Cover Story | Tim Tebow Foundation</div><b>Faith, hope and love, and a three-part fight against trafficking</b></div>
+<div class="cl"><div class="who">Hero &amp; Shero | T.I. &amp; Tiny Harris</div><b>The block behind Intrada Westside: 143 homes, one ribbon</b></div>
+<div class="cl"><div class="who">The Interview</div><b>Fostering the Future: what the record shows</b></div>
+</div>
+<div class="inset">
+<img src="assets/img/wheelchair-child.jpg" alt="A young boy in a wheelchair outdoors">
+<div class="cap">Portrait series: young heroes, photographed with permission.</div>
+</div>
+</div>
+<div class="coverbar"><span>Online now | Paper edition January 2027</span><span>heroesandsheros.com</span></div>
+</div>
+<div class="ptab">Cover | 01</div>
+</section>
+
+<section class="pgsec" id="p2" data-title="Contents">
+<div class="ptab">Contents | 02</div>
+<div class="kick">Premiere Issue | The Honors Edition</div>
+<h2 style="font-size:clamp(32px,4.4vw,48px);margin-top:8px">In this issue</h2>
+<div class="rule"><i></i></div>
+<div class="toc">
+<div>
+<div class="tocrow"><span class="n">01</span><span class="t"><b>Editor's Note: Why We Give Honor</b><span>A letter from Chief Editor Paula Skipper Peeples</span></span><span class="p">03</span></div>
+<div class="tocrow"><span class="n">02</span><span class="t"><b>Serving the Most Vulnerable</b><span>The Tim Tebow Foundation's work against trafficking</span></span><span class="p">06</span></div>
+<div class="tocrow"><span class="n">03</span><span class="t"><b>The Block Behind the Ribbon</b><span>T.I., Tiny Harris and the story of Intrada Westside</span></span><span class="p">14</span></div>
+<div class="tocrow"><span class="n">04</span><span class="t"><b>The Skyline We Share</b><span>One full-page photograph from Atlanta</span></span><span class="p">20</span></div>
+<div class="tocrow"><span class="n">05</span><span class="t"><b>Fostering the Future: What the Record Shows</b><span>Reported from official sources</span></span><span class="p">22</span></div>
+<div class="tocrow"><span class="n">06</span><span class="t"><b>Words We Keep</b><span>Marks of honor from this issue</span></span><span class="p">28</span></div>
+<div class="tocrow"><span class="n">07</span><span class="t"><b>Closing: What Comes Next</b><span>Nominations open for Issue 02</span></span><span class="p">32</span></div>
+</div>
+<aside class="picks">
+<h4>From the editor's desk</h4>
+<p>This first issue introduces the magazine we set out to build: people first, verified before publication, and generous with its praise. <span class="by">People who make a difference deserve to be seen, heard, and honored.</span></p>
+<p>The stories inside were chosen because the work is real: a foundation that has fought trafficking since 2010, a housing development that opened in 2023, and a national conversation about foster youth that deserves careful reporting.</p>
+<p class="by">Paula Skipper Peeples, Chief Editor</p>
+<p><span class="samp">Sample page</span></p>
+</aside>
+</div>
+<div class="folio"><span>Heroes &amp; Sheros Magazine</span><span>Contents</span><span>Page 02</span></div>
+</section>
+<section class="pgsec" id="p3" data-title="Editor's Note">
+<div class="ptab">Editor's Note | 03</div>
+<div class="kick">A letter from the Chief Editor</div>
+<h2 style="font-size:clamp(30px,3.9vw,44px);margin-top:8px">Why we give honor</h2>
+<div class="letter">
+<div class="body">
+<p class="lead">Heroes &amp; Sheros Magazine is built around one simple idea: people who make a difference deserve to be seen, heard, and honored.</p>
+<p>In every issue we shine a light on individuals, organizations, families, professionals and everyday people whose actions show compassion, courage, service or perseverance.</p>
+<p>Our motto, "Giving Honor Where Honor Is Due," is more than a tagline. It is a promise to report with care, to verify before we publish, and to celebrate generosity wherever we find it, from the firehouse to the front porch.</p>
+<p>This premiere issue covers the work of the Tim Tebow Foundation against human trafficking, the opening of Intrada Westside in Atlanta, and the national conversation around Fostering the Future. Each story was checked against official sources before it reached these pages, and each one carries its source so you can check it too.</p>
+<p>We are an online magazine now, with a paper edition planned for January 2027. Wherever you are reading, the standard does not change: real people, honest reporting, and honor given where honor is due.</p>
+<div class="sig"><b>Paula Skipper Peeples</b><span>Chief Editor, Heroes &amp; Sheros Magazine</span></div>
+<p style="margin-top:14px"><span class="samp">Sample letter</span></p>
+</div>
+<aside class="mastheadbox">
+<h4>Masthead | Premiere Issue</h4>
+<li><b>Paula Skipper Peeples</b><span>Chief Editor</span></li>
+<li><b>Mark Peeples</b><span>Co-Founder and Magazine Spokesman</span></li>
+<li><b>Editorial office</b><span><span class="ph">contact email to confirm</span></span></li>
+<li><b>Publication</b><span>Online now, paper January 2027</span></li>
+</aside>
+</div>
+<div class="folio"><span>Heroes &amp; Sheros Magazine</span><span>Editor's Note</span><span>Page 03</span></div>
+</section>
+
+<section class="pgsec" id="p4" data-title="Cover Story">
+<div class="ptab">Cover Story | 06</div>
+<div class="hero">
+<img src="assets/img/church.jpg" alt="A white chapel under a bright sky">
+<div class="veil"></div>
+<div class="cap">A ministry campus on a winter morning. <span class="imgnote">Layout image</span></div>
+<div class="htext">
+<div class="kick">Tim Tebow Foundation | Since 2010</div>
+<h2>Serving the most vulnerable</h2>
+</div>
+</div>
+<div class="storysplit">
+<div class="main">
+<div class="byline">Reporting from the foundation's public record | <em>Sample feature</em></div>
+<p>Founded in 2010, the Tim Tebow Foundation describes its mission as bringing faith, hope and love to people facing some of the darkest times in their lives, with a focus on what it calls the Most Vulnerable People around the world.</p>
+<p>One of the foundation's major areas of work is the fight against human trafficking and child exploitation. The approach has three parts: prevention through education and training, rescue through partnerships that support rescue missions, and care for survivors as they rebuild their lives.</p>
+<p class="pull">"People who make a difference deserve to be seen, heard, and honored."<span>From the Heroes &amp; Sheros About page</span></p>
+<p>Heroes &amp; Sheros features the organization because the work matches our mission: honoring the people and organizations that serve vulnerable communities quietly, consistently and without asking for attention.</p>
+<p>The full story continues with the numbers behind the programs, the partners involved, and what the foundation says comes next. Sources for every claim appear on the closing page of this feature.</p>
+</div>
+<aside class="asidecard">
+<h4>Fact file</h4>
+<table>
+<tr><td>Founded</td><td>2010</td></tr>
+<tr><td>Mission line</td><td>Faith, hope and love for people in crisis</td></tr>
+<tr><td>Core work</td><td>Prevention, rescue and survivor care</td></tr>
+<tr><td>Housing</td><td>Communities of safe housing for survivors</td></tr>
+</table>
+<div class="cap">Sources listed on page 32 of this issue.</div>
+</aside>
+</div>
+<div class="folio"><span>Heroes &amp; Sheros Magazine</span><span>Cover Story: Serving the Most Vulnerable</span><span>Page 06</span></div>
+</section>
+<section class="pgsec" id="p5" data-title="Profile">
+<div class="ptab">Hero &amp; Shero | 14</div>
+<div class="kick">Community and family | Atlanta</div>
+<h2 style="font-size:clamp(30px,4vw,46px);margin-top:8px">The block behind the ribbon</h2>
+<div class="storysplit">
+<div class="main">
+<div class="byline">A Heroes &amp; Sheros sample feature | Facts checked, interviews pending</div>
+<p>In November 2023, T.I. joined Atlanta Mayor Andre Dickens and project partners for the ribbon cutting of Intrada Westside, a development that brought 143 residential units to the city's west side. All of the units are affordable housing, and 25 of them were set aside as permanent supportive housing.</p>
+<p>T.I., born Clifford Joseph Harris Jr., is an Atlanta rapper, actor and entrepreneur. Tameka "Tiny" Harris is a singer and songwriter who rose to prominence as a member of the group Xscape. Between them are decades of music, business and a family life lived, mostly, in the city they call home.</p>
+<p class="pull">"Giving honor where honor is due: some honors are built, not awarded."<span>Heroes &amp; Sheros editorial | Sample line</span></p>
+<p>What makes the story worth a magazine's attention is not the guest list. It is the accountability: when a public figure puts a name to a ribbon, the units opened, the rents held and the repairs made all belong to the record. This magazine intends to return to those numbers in future issues.</p>
+<p>This sample feature withholds personal anecdotes that could not be independently documented. Names, dates and housing details are checked against Atlanta Housing and public reporting. <span class="samp">Sample copy</span></p>
+<div class="src" style="border-top:1px solid var(--line);padding-top:15px"><b>Sources:</b> Atlanta Housing public records on Intrada Westside, November 2023; city of Atlanta ribbon-cutting records.</div>
+</div>
+<aside class="asidecard">
+<h4>Fact file | Intrada Westside</h4>
+<table>
+<tr><td>Location</td><td>Atlanta, Georgia</td></tr>
+<tr><td>Opened</td><td>November 2023</td></tr>
+<tr><td>Homes</td><td>143 units, all affordable</td></tr>
+<tr><td>Supportive housing</td><td>25 permanent supportive units</td></tr>
+<tr><td>Ribbon cutting</td><td>T.I. joined Mayor Andre Dickens and partners</td></tr>
+</table>
+<img src="assets/img/homes.jpg" alt="A freshly painted house with workers outside" style="margin-top:16px">
+<div class="cap">Move-in week on the west side. <span class="imgnote">Layout image</span></div>
+</aside>
+</div>
+<div class="folio"><span>Heroes &amp; Sheros Magazine</span><span>Hero &amp; Shero: T.I. &amp; Tiny Harris</span><span>Page 14</span></div>
+</section>
+
+<section class="pgsec" id="p6" data-title="Photo Page">
+<div class="ptab">Full-Page Photo | 20</div>
+<div class="photohero">
+<img src="assets/img/atlanta.jpg" alt="The Atlanta skyline at dusk above a public park">
+<div class="veil"></div>
+<div class="cap">Downtown Atlanta at dusk. <span class="imgnote">Layout image</span></div>
+<div class="ptext">
+<div class="kick">The skyline we share</div>
+<h2>Every story happens somewhere</h2>
+<p>Every story in this issue happens somewhere under these lights. Issue 01 returns to the same city block by block, photographing the people who keep it standing. <span class="samp">Sample caption copy</span></p>
+</div>
+</div>
+</section>
+<section class="pgsec" id="p7" data-title="The Interview">
+<div class="ptab">The Interview | 22</div>
+<div class="kick">Fostering the Future | Official record</div>
+<h2 style="font-size:clamp(30px,4vw,46px);margin-top:8px">What the record shows</h2>
+<div class="talk">
+<div class="side">
+<img src="assets/img/interview.jpg" alt="An interview in progress">
+<div class="cap">Interview setup for the print edition. <span class="imgnote">Layout image</span></div>
+</div>
+<div class="qa">
+<div class="byline">Reported from White House and Treasury releases | <em>Sample frame</em></div>
+<p>For Heroes &amp; Sheros readers, the throughline is simple: what happens the moment foster care ends? A young person aging out of the system faces a first apartment, a first paycheck and a first month with nobody behind them. The national conversation around Fostering the Future is, at heart, a conversation about that month.</p>
+<div class="q">November 2025: the order</div>
+<div class="a">The White House announced an Executive Order titled "Fostering the Future for American Children and Families," describing an initiative led by First Lady Melania Trump focused on expanding education and opportunity for youth in foster care. <span class="samp">Sample</span></div>
+<div class="q">June 2026: the accounts</div>
+<div class="a">The White House announced the launch of Fostering the Future Accounts, described as a savings and investment vehicle for youth in foster care, developed with the U.S. Department of Treasury, with pledges from private partners.</div>
+<div class="q">Our standard</div>
+<div class="a">Stories about current political figures are published as factual reporting with clear sourcing and without political endorsement. Every claim on this page is tied to an official release, and corrections run in the next issue and online.</div>
+<div class="src" style="border-top:1px solid var(--line);padding-top:15px;margin-top:20px"><b>Official sources:</b> The White House, June 2026 and November 2025 releases. <span class="ph">live links to confirm at launch</span></div>
+</div>
+</div>
+<div class="folio"><span>Heroes &amp; Sheros Magazine</span><span>The Interview: Fostering the Future</span><span>Page 22</span></div>
+</section>
+
+<section class="pgsec" id="p8" data-title="Pull Quotes">
+<div class="ptab">Words We Keep | 28</div>
+<div class="kick">Marks of honor from Issue 01</div>
+<h2 style="font-size:clamp(30px,3.9vw,42px);margin-top:8px">Words we keep</h2>
+<div class="quotebank">
+<div class="qblock gold">
+<div class="qt">"Bringing faith, hope and love to people facing some of the darkest times in their lives."</div>
+<div class="qb">Tim Tebow Foundation, mission statement</div>
+</div>
+<div class="qblock">
+<div class="qt">"People who make a difference deserve to be seen, heard, and honored."</div>
+<div class="qb">From the Heroes &amp; Sheros About page</div>
+</div>
+<div class="qblock wide">
+<img src="assets/img/volunteer.jpg" alt="A volunteer runner at a community event">
+<div>
+<div class="qt" style="font-size:clamp(24px,3vw,33px)">"Giving Honor Where Honor Is Due."</div>
+<div class="qb">Paula Skipper Peeples, Chief Editor | The magazine motto</div>
+<div style="margin-top:14px"><span class="samp">Sample layout</span></div>
+</div>
+</div>
+<div class="qblock">
+<div class="qt">"The stories inside were chosen because the work is real."</div>
+<div class="qb">From the editor's desk | Premiere Issue</div>
+</div>
+</div>
+<div class="folio"><span>Heroes &amp; Sheros Magazine</span><span>Words We Keep</span><span>Page 28</span></div>
+</section>
+<section class="pgsec" id="p9" data-title="Closing">
+<div class="ptab">Closing | 32</div>
+<div class="kick">End of Issue 01</div>
+<h2 style="font-size:clamp(30px,4vw,44px);margin-top:8px">What comes next</h2>
+<div class="closegrid">
+<div>
+<div class="podcastcard">
+<h4>Heroic Hearts podcast coming soon</h4>
+<p>A companion audio series is in development. Guests, schedule and subscription links will be announced with Issue 02.</p>
+</div>
+<ul class="nextlist">
+<li><b>Nominations are open.</b> Tell us about a teacher, first responder, veteran, foster parent, caregiver, mentor or neighbor who deserves recognition.</li>
+<li><b>Issue 02: Everyday Heroes.</b> The next edition opens the nominations file and returns to the stories that started here.</li>
+<li><b>Paper edition.</b> The print issue arrives January 2027; subscribers get it first.</li>
+<li><b>Contact.</b> <span class="ph">contact email to confirm</span> | heroesandsheros.com</li>
+</ul>
+<div class="actions">
+<a href="#p1">Nominate a hero or shero</a>
+<a class="alt" href="#p2">Back to contents</a>
+<a class="alt" href="index.html">Presentation hub</a>
+</div>
+</div>
+<div>
+<div class="colophon">
+<b>Heroes &amp; Sheros Magazine</b><br>
+Giving Honor Where Honor Is Due<br>
+Premiere Issue | The Honors Edition | 2026<br><br>
+<b>Paula Skipper Peeples</b>, Chief Editor<br>
+<b>Mark Peeples</b>, Co-Founder and Magazine Spokesman<br><br>
+Online now | Paper edition January 2027<br>
+heroesandsheros.com<br><br>
+Editorial office: <span class="ph">contact email to confirm</span><br><br>
+Photography in this mockup is licensed stock for layout only.<br>
+Facts checked against the client's content master and cited sources.
+</div>
+</div>
+</div>
+<div class="folio"><span>Heroes &amp; Sheros Magazine</span><span>Closing</span><span>Page 32</span></div>
+</section>
+
+<nav class="pgnav" id="pgnav" aria-label="Page navigation">
+<button id="prevb" type="button">Prev</button>
+<span class="count" id="pgcount">Page 1</span>
+<button id="nextb" type="button">Next</button>
+<a href="#p2">Contents</a>
+<a href="index.html">Hub</a>
+</nav>
+<script>
+var secs=[].slice.call(document.querySelectorAll('.pgsec'));
+var cur=0;
+var cnt=document.getElementById('pgcount');
+function setI(i){cur=Math.max(0,Math.min(secs.length-1,i));cnt.textContent=secs[cur].getAttribute('data-title')+' | '+cur+' of '+secs.length;}
+if('IntersectionObserver' in window){
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)setI(secs.indexOf(e.target));});},{threshold:.45});
+secs.forEach(function(s){io.observe(s);});
+}
+document.getElementById('prevb').addEventListener('click',function(){setI(cur-1);secs[cur].scrollIntoView({behavior:'smooth'});});
+document.getElementById('nextb').addEventListener('click',function(){setI(cur+1);secs[cur].scrollIntoView({behavior:'smooth'});});
+setI(0);
+</script>
+</body>
+</html>
