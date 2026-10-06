@@ -2,193 +2,213 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Heroes &amp; Sheros Magazine · Design Concepts Hub</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Heroes &amp; Sheros Magazine | Presentation Hub</title>
+<meta name="description" content="Heroes and Sheros Magazine design presentation: four magazine concepts, newsletters and website framework for review.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,600&family=Anton&family=Bangers&family=Archivo:wght@400;500;600;700;800&family=Fraunces:ital,wght@0,600;1,600&family=Cormorant+Garamond:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lora:ital,wght@0,400;1,400&family=Archivo:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#101D45;--blue:#1E4FD6;--red:#A6192E;--gold:#C2A353;--gold-deep:#8C6E2A;--cream:#FBF9F4;--ink:#17181C;--grey:#5D6472;--line:#E0DACB;--clay:#C96F4A}
-*{box-sizing:border-box;margin:0;padding:0}
-html{-webkit-text-size-adjust:100%}
-body{background:#EFEBE1;font-family:Archivo,Helvetica,Arial,sans-serif;color:var(--ink);line-height:1.65;font-size:15px}
-a{color:inherit}
-img,svg{display:block;max-width:100%}
-.hero{background:linear-gradient(160deg,#0B1330 0%,#101D45 55%,#1A2A61 100%);color:#F3EEE0;padding:56px 20px 48px;text-align:center;position:relative;overflow:hidden}
-.hero::after{content:"";position:absolute;inset:14px;border:1px solid rgba(194,163,85,.5);pointer-events:none}
-.hero .org{font:800 11px/1 Archivo,sans-serif;letter-spacing:.44em;text-transform:uppercase;color:#C2A353}
-.hero h1{font:900 clamp(34px,7vw,64px)/1.05 "Playfair Display",serif;margin:16px 0 6px;color:#F7F2E4}
-.hero .mot{font:italic 600 clamp(15px,2.4vw,19px)/1.5 "Playfair Display",serif;color:#E8D5A2}
-.hero p.sub{font:500 13.5px/1.8 Archivo,sans-serif;color:#BFC6DC;max-width:70ch;margin:14px auto 0}
-.wrap{max-width:1040px;margin:0 auto;padding:34px 20px 60px}
-.kick{font:800 10px/1 Archivo,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-deep)}
-h2{font:900 clamp(22px,3.4vw,30px)/1.2 "Playfair Display",serif;margin-top:6px}
-.rule{border-top:3px double var(--gold);border-bottom:1px solid var(--gold);height:4px;margin:10px 0 20px}
-.section{margin-top:44px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px;margin-top:16px}
-.card{background:var(--cream);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 10px 26px rgba(23,24,28,.08);transition:transform .15s ease}
-.card:hover{transform:translateY(-3px)}
-.card .top{height:96px;position:relative;display:flex;align-items:flex-end;padding:12px 16px}
-.card .top .num{font:900 44px/1 "Playfair Display",serif;color:rgba(255,255,255,.9)}
-.card .top .style{position:absolute;top:12px;right:14px;font:800 9px/1.4 Archivo,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.92);text-align:right}
-.card .body{padding:16px 18px 18px;flex:1;display:flex;flex-direction:column}
-.card h3{font:900 19px/1.25 "Playfair Display",serif}
-.card .meta{font:700 9.5px/1.7 Archivo,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--grey);margin-top:6px}
-.card p{font:500 13px/1.65 Archivo,sans-serif;color:#3E4152;margin-top:10px;flex:1}
-.card .go{display:inline-block;margin-top:14px;background:var(--navy);color:#F7F3E8;font:800 11px/1 Archivo,sans-serif;letter-spacing:.16em;text-transform:uppercase;padding:13px 18px;text-decoration:none;border-radius:8px;text-align:center}
-.swatches{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-top:14px}
-.sw{border-radius:10px;height:88px;padding:10px;display:flex;align-items:flex-end;font:700 9.5px/1.4 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#fff;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
-.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:16px}
-.panel{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
-.panel h4{font:800 11px/1.6 Archivo,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--navy);margin-bottom:8px}
-.panel li{margin-left:18px;font-size:13px;color:#3E4152;margin-top:4px}
-.footer{text-align:center;font:700 10.5px/2 Archivo,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8A8471;border-top:1px solid var(--line);margin-top:50px;padding-top:18px}
+:root{--navy:#101E45;--royal:#1739C9;--crimson:#A3192E;--gold:#D9A269;--gold-ink:#8F5A1C;--ink:#1C2333;--grey:#6E7385;--line:#E4DCC8;--ivory:#FAF9F4}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ivory);color:var(--ink);font:16.5px/1.75 Lora,Georgia,serif;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--navy)}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;margin:0;line-height:1.12}
+.kick{font:800 11.5px/1.5 Archivo,sans-serif;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-ink)}
+.samp{font:800 10px/1 Archivo,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--grey);padding:5px 8px;white-space:nowrap}
+.ph{font:700 12px/1.4 Archivo,sans-serif;color:#A3192E;border-bottom:1px dashed #A3192E}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.topbar{position:sticky;top:0;z-index:50;background:var(--navy);color:#fff;display:flex;justify-content:space-between;gap:14px;align-items:center;padding:9px 20px;font:800 11.5px/1.4 Archivo,sans-serif;letter-spacing:.16em;text-transform:uppercase;flex-wrap:wrap}
+.topbar a{color:var(--gold);text-decoration:none}
+.notice{background:#fff;border-bottom:1px solid var(--line);font:400 13.5px/1.6 Archivo,sans-serif;padding:11px 20px;color:#4A4F60}
+.notice b{color:var(--navy);text-transform:uppercase;letter-spacing:.1em;font-size:12px}
+.hero{background:var(--navy);border-bottom:4px solid var(--royal);color:#fff;padding:64px 0 58px;position:relative;overflow:hidden}
+.hero .brandrow{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.hero .logoplate{filter:drop-shadow(0 8px 18px rgba(6,12,32,.5))}
+.hero .logoplate img{width:132px;height:auto}
+.hero h1{font-size:clamp(34px,5vw,54px);color:#fff;margin-top:6px}
+.hero .tag{font:800 11.5px/1.7 Archivo,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+.hero p{font-size:17.5px;line-height:1.8;color:#DDD8CA;max-width:760px;margin-top:16px}
+.hero .meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.hero .meta span{font:800 11px/1 Archivo,sans-serif;letter-spacing:.16em;text-transform:uppercase;border:1px solid rgba(255,255,255,.4);padding:10px 14px;color:#fff}
+section.block{padding:50px 0}
+.blockhead{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;border-bottom:3px solid var(--navy);padding-bottom:12px;margin-bottom:24px}
+.blockhead h2{font-size:clamp(24px,3vw,32px)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.pcard{background:#fff;border:1px solid var(--line);display:flex;flex-direction:column}
+.pcard img{height:180px;width:100%;object-fit:cover}
+.pcard .pbody{padding:20px 20px 22px;display:flex;flex-direction:column;flex:1}
+.pcard .kick{font-size:10.5px}
+.pcard b{display:block;font:900 21px/1.25 "Playfair Display",serif;margin:8px 0 8px}
+.pcard span{font:400 14.5px/1.65 Archivo,sans-serif;color:#4A4F60;flex:1}
+.pcard .links{margin-top:14px;display:flex;gap:14px;flex-wrap:wrap}
+.pcard a.open{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;font:800 11.5px/1 Archivo,sans-serif;letter-spacing:.16em;text-transform:uppercase;padding:13px 18px}
+.pcard a.open:hover{background:#1739C9}
+.pcard a.open.gold{background:var(--gold);color:#241C07}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.fbox{background:#fff;border:1px solid var(--line);padding:24px}
+.fbox h3{font-size:20px;margin-bottom:10px}
+.fbox ul{margin:0;padding-left:18px}
+.fbox li{font:400 14.5px/1.8 Archivo,sans-serif;color:#4A4F60}
+.fbox .ph{font-size:11.5px}
+.rulebox{background:var(--navy);color:#DDD8CA;padding:30px 28px;border:1px solid var(--navy);border-left:6px solid var(--crimson)}
+.rulebox h3{color:#fff;font-size:22px;margin-bottom:12px}
+.rulebox ul{margin:0;padding-left:18px}
+.rulebox li{font:400 14.5px/1.9 Archivo,sans-serif}
+footer.site{background:var(--navy);color:#A9A496;padding:34px 0 90px;font:400 13px/1.9 Archivo,sans-serif}
+footer.site b{color:var(--gold)}
+footer.site .ph{color:#F0C9A0;border-color:#F0C9A0}
+.pgnav{position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(16,30,69,.97);display:flex;justify-content:center;gap:10px;align-items:center;padding:10px 14px;flex-wrap:wrap}
+.pgnav a{font:800 10.5px/1 Archivo,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#fff;border:1px solid rgba(255,255,255,.5);padding:9px 15px;text-decoration:none}
+.pgnav a:hover{background:var(--gold);border-color:var(--gold);color:#241C07}
+.pgnav .count{font:800 10.5px/1 Archivo,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);padding:0 8px}
+@media(max-width:860px){.grid,.facts{grid-template-columns:1fr}.hero{padding:48px 0 44px}}
 </style>
 </head>
 <body>
-<header class="hero">
-<div class="org">Design Presentation · Draft for Review</div>
-<svg width="96" height="102" style="margin:18px auto 6px" viewBox="0 0 200 214" aria-label="Heroes and Sheros HH diamond logo mark">
-<polygon points="60,20 100,20 100,70 30,70" fill="#F4E3B2"/>
-<polygon points="30,70 100,70 100,190" fill="#E3B94F"/>
-<polygon points="100,20 140,20 170,70 100,70" fill="#9CC3F2"/>
-<polygon points="100,70 170,70 100,190" fill="#2E6BE6"/>
-<path d="M60 20 30 70 100 190 170 70 140 20Z" fill="none" stroke="#0F1D45" stroke-width="3"/>
-<path d="M100 20V190M30 70H170M60 20 100 70 140 20M30 70 100 120 170 70" stroke="rgba(15,29,69,.35)" stroke-width="1.4" fill="none"/>
-<path d="M100 84c-5-11-24-9-24 3 0 11 14 18 24 27 10-9 24-16 24-27 0-12-19-14-24-3z" fill="#C8102E" stroke="#6E0F1F" stroke-width="2"/>
-<text x="55" y="126" font-family="Arial Black,Impact,sans-serif" font-size="33" fill="#E3B94F" stroke="#7A5A12" stroke-width="1">H</text>
-<text x="118" y="126" font-family="Arial Black,Impact,sans-serif" font-size="33" fill="#C8102E" stroke="#6E0F1F" stroke-width="1">H</text>
-<path d="M18 168 C48 156 72 190 102 180 C132 170 154 196 184 180 L184 205 C154 222 128 196 102 204 C72 214 44 188 18 198 Z" fill="#2E6BE6" opacity=".92"/>
-<path d="M28 186 C58 176 80 206 112 196 C144 186 162 208 190 196 L190 212 C160 226 134 206 110 212 C80 220 54 200 28 210 Z" fill="#E3B94F" opacity=".95"/>
-</svg>
-<h1>Heroes &amp; Sheros Magazine</h1>
-<div class="mot">“Giving Honor Where Honor Is Due”</div>
-<p class="sub">A presentation pack for Paula Skipper Peeples (Chief Editor) &amp; Mark Peeples (Co-Founder &amp; Magazine Spokesman): <b>4 complete magazine creative directions</b>, <b>4 newsletter concepts</b>, and the <b>website framework</b> — built from the client’s own content master, ready for the final direction to be chosen.</p>
+<header class="topbar">
+<span>Heroes &amp; Sheros | Design presentation</span>
+<a href="concept-1-premium-editorial.html">Open Concept 1</a>
 </header>
-<main class="wrap">
-<section>
-<div class="kick">What’s Inside</div>
-<h2>4 Magazine Directions · 4 Newsletters · 1 Website Framework</h2>
-<div class="rule"></div>
-<p style="font:500 14px/1.75 Archivo,sans-serif;color:var(--grey);max-width:80ch">Open any file below in Chrome. Each magazine concept shows <b>multiple pages</b> (cover → contents → features → closing) so the complete visual direction can be compared — article-heavy and image-heavy pages, responsive for digital reading, ready to be developed into a real magazine and adapted for future issues.</p>
-<div class="cards">
-<div class="card">
-<div class="top" style="background:linear-gradient(135deg,#101D45,#2A3F7E 65%,#8C6E2A 135%)"><span class="num">01</span><span class="style">Playfair + Lora<br>Ivory · Navy · Gold</span></div>
-<div class="body">
-<h3>Premium Editorial Magazine</h3>
-<div class="meta">9 pages · Cover · Contents · Editor’s Note · Feature Spread · Profile · Full-Page Photo · Article Continuation · Pull Quotes · Closing</div>
-<p>Sophisticated, print-inspired elegance — strong photography, double rules, refined serif typography.</p>
-<a class="go" href="concept-1-premium-editorial.html">Open Concept 1 →</a>
+<div class="notice"><b>Design review mockup v3:</b> every file now carries the client's HH diamond logo and the palette taken from it: navy, royal blue, gold, crimson and crystal blue. Editorial copy is sample text built on the content master; facts are sourced, quotes marked "sample" await sign-off. Photography is licensed stock standing in for permission-cleared images. Fonts are Google Fonts pending Paula's selection.</div>
+
+<header class="hero">
+<div class="wrap">
+<div class="brandrow">
+<div class="logoplate"><img src="assets/hh-logo-web.png" alt="Heroes and Sheros HH diamond logo"></div>
+<div>
+<div class="tag">Giving Honor Where Honor Is Due</div>
+<h1>Heroes &amp; Sheros Magazine</h1>
 </div>
 </div>
-<div class="card">
-<div class="top" style="background:linear-gradient(135deg,#1E4FD6,#0A1440 70%)"><span class="num" style="font-family:Anton,sans-serif">02</span><span class="style">Anton + Bangers<br>Blue · Red · Gold</span></div>
-<div class="body">
-<h3>Modern &amp; Bold — MEGA energy</h3>
-<div class="meta">8 pages · Cover · Contents · Featured Story · Spotlight · Multi-Column · Photo+Text · Quote Callout · Closing</div>
-<p>Big type, hard grids, sticker energy — the “MEGA MAGAZINE” direction the brief asked for.</p>
-<a class="go" href="concept-2-modern-bold.html">Open Concept 2 →</a>
+<p>Four complete magazine concepts, three newsletter editions and a website framework, built to the notes in the design review: real copy instead of placeholder filler, sourced facts instead of invented detail, and the decorative habits of round one removed.</p>
+<div class="meta"><span>Premiere Issue 01 | The Honors Edition</span><span>Online now | Paper January 2027</span><span>Paula Skipper Peeples, Chief Editor</span></div>
+</div>
+</header>
+
+<div class="wrap">
+
+<section class="block" id="concepts">
+<div class="blockhead"><h2>The four concepts</h2><span class="kick">Each opens as its own paginated issue</span></div>
+<div class="grid">
+<div class="pcard">
+<img src="assets/img/cover-community.jpg" alt="Volunteers gathering outdoors">
+<div class="pbody">
+<div class="kick">Concept 1 | Premium editorial</div>
+<b>Playfair Display on ivory, navy and gold</b>
+<span>The full nine-page issue: cover, contents, editor's letter, feature spread, profile with fact file, full-page photo, reported continuation, pull quotes and closing. Pagination bar, running folios, sources box on every story.</span>
+<div class="links"><a class="open" href="concept-1-premium-editorial.html">Open Concept 1</a></div>
 </div>
 </div>
-<div class="card">
-<div class="top" style="background:linear-gradient(150deg,#E8B48E,#C96F4A 65%,#7A6A4F 130%)"><span class="num" style="font-family:Fraunces,serif">03</span><span class="style">Fraunces + Nunito<br>Cream · Clay · Olive</span></div>
-<div class="body">
-<h3>Inspirational / Human-Centered</h3>
-<div class="meta">8 pages · Cover · Contents · Interview · Biography · Portrait Page · In Their Own Words · Supporting Article · Closing</div>
-<p>Warm and emotional, portrait-first — the people and stories carry every page.</p>
-<a class="go" href="concept-3-inspirational.html">Open Concept 3 →</a>
+<div class="pcard">
+<img src="assets/img/street-10.jpg" alt="A city street scene">
+<div class="pbody">
+<div class="kick">Concept 2 | Modern bold</div>
+<b>Anton and Archivo, navy rules and crimson</b>
+<span>The same issue rebuilt as a sharp newspaper grid: heavy navy rules, gold fact strips, royal blue accents and offset shadow buttons. Eight pages with a full interview layout.</span>
+<div class="links"><a class="open" href="concept-2-modern-bold.html">Open Concept 2</a></div>
 </div>
 </div>
-<div class="card">
-<div class="top" style="background:linear-gradient(140deg,#152047,#0C1533 65%,#241C07 135%)"><span class="num" style="font-family:'Cormorant Garamond',serif">04</span><span class="style">Cormorant + Montserrat<br>Navy · Gold · Ivory</span></div>
-<div class="body">
-<h3>Luxury Lifestyle / Showcase</h3>
-<div class="meta">9 pages · Cover · Contents · Main Feature · Spotlight · Lifestyle · Ad Specimen · Podcast · Partners · Closing</div>
-<p>Dark, gilded and sponsor-ready — built to support advertisers and premium partnerships.</p>
-<a class="go" href="concept-4-luxury-showcase.html">Open Concept 4 →</a>
+<div class="pcard">
+<img src="assets/img/garden.jpg" alt="A community garden">
+<div class="pbody">
+<div class="kick">Concept 3 | Inspirational</div>
+<b>Cormorant Garamond on ivory, navy and crimson</b>
+<span>Warm and generous: rounded page cards, italic pull quotes, a monogram signature and the quote bank set as rounded panels. Nine pages, same verified facts and sourcing.</span>
+<div class="links"><a class="open" href="concept-3-inspirational.html">Open Concept 3</a></div>
 </div>
 </div>
-<div class="card">
-<div class="top" style="background:linear-gradient(90deg,#101D45 0%,#1E4FD6 34%,#C96F4A 67%,#0C1533 100%)"><span class="num">✉</span><span class="style">4 Email Layouts<br>Responsive</span></div>
-<div class="body">
-<h3>4 Newsletter Concepts</h3>
-<div class="meta">Article · Image · Podcast · Feature · CTA / Promo Sections</div>
-<p>Four email designs matching the four directions — header, stories, quote, podcast block, CTA, footer with unsubscribe.</p>
-<a class="go" href="newsletters.html">Open Newsletters →</a>
+<div class="pcard">
+<img src="assets/img/gala.jpg" alt="Guests at a formal event">
+<div class="pbody">
+<div class="kick">Concept 4 | Luxury showcase</div>
+<b>Cormorant and Jost on deep navy and gold</b>
+<span>The gala treatment: deep navy pages, thin gold rules, letterspaced small caps and framed fact files. Nine pages for readers who want the honors edition to feel like an invitation.</span>
+<div class="links"><a class="open" href="concept-4-luxury-showcase.html">Open Concept 4</a></div>
 </div>
-</div>
-<div class="card">
-<div class="top" style="background:repeating-linear-gradient(135deg,#F4F5F7 0 14px,#E9EDF8 14px 28px);color:#101D45"><span class="num" style="color:#101D45">▦</span><span class="style" style="color:#5D6472">Wireframes<br>IA · Templates · QA</span></div>
-<div class="body">
-<h3>Website Framework</h3>
-<div class="meta">Sitemap · Homepage Flow · Article Template · Directories · Form · SEO · Checklist</div>
-<p>The full site architecture from the client content master — ready to skin with whichever direction wins.</p>
-<a class="go" href="website-framework.html">Open Framework →</a>
-</div>
-</div>
-</div>
-</section>
-<section class="section">
-<div class="kick">Brand System</div>
-<h2>Palette &amp; Type (shared across all directions)</h2>
-<div class="rule"></div>
-<div class="swatches">
-<div class="sw" style="background:#1E4FD6"><span>#1E4FD6 · Royal Blue</span></div>
-<div class="sw" style="background:#101D45"><span>#101D45 · Deep Navy</span></div>
-<div class="sw" style="background:#C2A353"><span>#C2A353 · Honor Gold</span></div>
-<div class="sw" style="background:#A6192E"><span>#A6192E · Heart Red</span></div>
-<div class="sw" style="background:#C96F4A"><span>#C96F4A · Warm Clay (03)</span></div>
-<div class="sw" style="background:#FBF9F4;color:#5D6472"><span>#FBF9F4 · Ivory</span></div>
-</div>
-<div class="two">
-<div class="panel">
-<h4>Typography per direction</h4>
-<li><b>01 Premium</b> — Playfair Display + Lora + Inter labels</li>
-<li><b>02 Bold</b> — Anton + Bangers (comic/pop display) + Archivo</li>
-<li><b>03 Inspirational</b> — Fraunces + Nunito Sans</li>
-<li><b>04 Luxury</b> — Cormorant Garamond + Montserrat</li>
-<li>Display inspiration per attached font refs: comic / eye-popping lettering (used in 02, echoed as bold accents elsewhere)</li>
-</div>
-<div class="panel">
-<h4>People &amp; publication</h4>
-<li><b>Paula Skipper Peeples</b> — Chief Editor (full name in formal mentions)</li>
-<li><b>Mark Peeples</b> — Co-Founder &amp; Magazine Spokesman</li>
-<li>Online magazine now · <b>paper edition January 2027</b></li>
-<li>Motto everywhere: “Giving Honor Where Honor Is Due”</li>
-<li>Source of truth: <i>Heroes &amp; Sheros Complete Website Content &amp; Build Master</i></li>
 </div>
 </div>
 </section>
 
-<section class="section">
-<div class="kick">Client Brief</div>
-<h2>Requirements — honored in every concept</h2>
-<div class="rule"></div>
-<div class="two">
-<div class="panel">
-<h4>Visual &amp; branding</h4>
-<li><span class="ok">✓</span> HH diamond/heart logo treatment + gold/blue ribbons throughout</li>
-<li><span class="ok">✓</span> “Hero &amp; Shero — giving/honoring where honor is due” lockups</li>
-<li><span class="ok">✓</span> <b>No stars</b> anywhere in the designs (per Paula’s note)</li>
-<li><span class="ok">✓</span> <b>Child in a wheelchair</b> included in cover/hero imagery</li>
-<li><span class="ok">✓</span> TV graphic reading <b>“Heroic Hearts podcast coming soon”</b></li>
-<li><span class="ok">✓</span> Not a regular magazine — a <b>MEGA MAGAZINE</b> (Concept 02 carries the full energy; others keep their own voice)</li>
+<section class="block" id="support">
+<div class="blockhead"><h2>Newsletters and website</h2><span class="kick">The program around the issue</span></div>
+<div class="grid">
+<div class="pcard">
+<img src="assets/img/podcast.jpg" alt="A microphone in a recording studio">
+<div class="pbody">
+<div class="kick">Email | Three editions</div>
+<b>Issue dispatch, nominations call, podcast launch</b>
+<span>Single-column 600px emails with masthead, subject and from lines, preference and unsubscribe footers, and copy that leads with a person or a number rather than a slogan.</span>
+<div class="links"><a class="open gold" href="newsletters.html">Open newsletters</a></div>
 </div>
-<div class="panel">
-<h4>Production standards</h4>
-<li><span class="ok">✓</span> Real client content: Tim Tebow Foundation · T.I. &amp; Tiny Harris / Intrada Westside · Fostering the Future (verified facts, sourced, non-endorsing)</li>
-<li><span class="ok">✓</span> Article-heavy <i>and</i> image-heavy pages in every concept</li>
-<li><span class="ok">✓</span> Consistent typography, spacing &amp; hierarchy within each concept</li>
-<li><span class="ok">✓</span> Responsive — reflows for phones while keeping the magazine feel</li>
-<li><span class="ok">✓</span> Photo placeholders are clearly marked for client-supplied, permission-cleared imagery</li>
+</div>
+<div class="pcard">
+<img src="assets/img/homes.jpg" alt="A freshly painted house">
+<div class="pbody">
+<div class="kick">Website | Framework</div>
+<b>Homepage, sections, article template, footer</b>
+<span>Site navigation, hero, story cards, honoree index rules, nomination flow, podcast block, a complete article template with sources box, and the footer with corrections policy.</span>
+<div class="links"><a class="open gold" href="website-framework.html">Open framework</a></div>
+</div>
 </div>
 </div>
 </section>
-
-<div class="footer">
-Heroes &amp; Sheros Magazine · Design Presentation · Draft for Review<br>
-Paula Skipper Peeples — Chief Editor · Mark Peeples — Co-Founder &amp; Magazine Spokesman · Giving Honor Where Honor Is Due
+<section class="block" id="shared">
+<div class="blockhead"><h2>Shared across every file</h2><span class="kick">One brand, six deliverables</span></div>
+<div class="facts">
+<div class="fbox">
+<h3>Facts the copy rests on</h3>
+<ul>
+<li>Motto, mission line and About-page quote, used exactly as approved.</li>
+<li>Tim Tebow Foundation: founded 2010; faith, hope and love mission line; prevent, rescue and care approach to trafficking.</li>
+<li>Intrada Westside: Atlanta, opened November 2023, 143 affordable units, 25 permanent supportive, ribbon cutting with Mayor Andre Dickens.</li>
+<li>Fostering the Future: Executive Order November 2025, accounts launched June 2026 with Treasury, reported without endorsement.</li>
+<li>Contact address, live links and dates still open are marked <span class="ph">to confirm</span> instead of being invented.</li>
+</ul>
 </div>
-</main>
+<div class="fbox">
+<h3>Assets in this folder</h3>
+<ul>
+<li>Logo: <b>assets/hh-logo-web.png</b>, the client's diamond-and-cape mark on a transparent background, with the original files kept alongside.</li>
+<li>Photography: 27 semantic copies in <b>assets/img/</b>, named by subject (cover-community, wheelchair-child, church, homes, atlanta and so on).</li>
+<li>Captions credit every image and mark layout stock until the client's permission-cleared shots arrive.</li>
+<li>Palette from the logo: navy #101E45, royal blue #1739C9, gold #D9A269, crimson #A3192E, crystal blue #2B6FB8, on ivory #FAF9F4.</li>
+<li>Fonts load from Google Fonts: the four concepts each carry their own pairing, the support pages share Playfair, Lora and Archivo.</li>
+</ul>
+</div>
+</div>
+<div class="rulebox" style="margin-top:22px">
+<h3>How round two answers the review</h3>
+<ul>
+<li>Decorative dashes, middle dots and arrows cut from all visible copy; separators are plain bars, rules or spacing.</li>
+<li>Layout no longer narrates itself inside the layout; page labels are short, like Cover or Contents.</li>
+<li>Placeholder filler replaced with real editorial copy: every article states its sources, unverifiable anecdotes are withheld, and remaining unknowns are marked to confirm.</li>
+<li>Quotes that have not been signed off carry a sample marker; the review notice sits above each file, not inside the design.</li>
+</ul>
+</div>
+</section>
+
+</div>
+
+<footer class="site">
+<div class="wrap">
+<b>Heroes &amp; Sheros Magazine</b> | Giving Honor Where Honor Is Due | Premiere Issue 2026<br>
+For Paula Skipper Peeples, Chief Editor, and Mark Peeples, Co-Founder and Magazine Spokesman | heroesandsheros.com<br>
+Editorial office: <span class="ph">contact email to confirm</span> | Paper edition January 2027<br>
+Photography in this presentation is licensed stock for layout only. Facts checked against the content master and cited sources.
+</div>
+</footer>
+
+<nav class="pgnav" aria-label="Presentation navigation">
+<span class="count">Presentation hub | 7 files</span>
+<a href="concept-1-premium-editorial.html">Concept 1</a>
+<a href="concept-2-modern-bold.html">Concept 2</a>
+<a href="concept-3-inspirational.html">Concept 3</a>
+<a href="concept-4-luxury-showcase.html">Concept 4</a>
+<a href="newsletters.html">Newsletters</a>
+<a href="website-framework.html">Website</a>
+</nav>
 </body>
 </html>

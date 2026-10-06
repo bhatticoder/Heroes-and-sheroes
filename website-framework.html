@@ -2,247 +2,292 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Website Framework · Heroes &amp; Sheros Magazine</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Heroes &amp; Sheros | Website Framework</title>
+<meta name="description" content="Heroes and Sheros Magazine website framework: homepage, sections, article template and footer.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,900;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lora:ital,wght@0,400;1,400&family=Archivo:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#101D45;--blue:#1E4FD6;--gold:#C2A353;--gold-deep:#8C6E2A;--red:#A6192E;--ink:#17181C;--grey:#5D6472;--line:#D9D3C4;--mist:#F4F5F7;--cream:#FBF9F4}
-*{box-sizing:border-box;margin:0;padding:0}
-html{-webkit-text-size-adjust:100%}
-body{background:#E6E1D6;font-family:Archivo,Helvetica,Arial,sans-serif;color:var(--ink);line-height:1.6;font-size:14.5px}
-a{color:inherit}
-img,svg{display:block;max-width:100%}
-.demobar{position:sticky;top:0;z-index:60;display:flex;flex-wrap:wrap;gap:10px 18px;justify-content:space-between;align-items:center;background:#101418;color:#EDE9DF;font:700 11px/1 Archivo,sans-serif;letter-spacing:.14em;text-transform:uppercase;padding:11px 18px}
-.demobar a{color:#EDE9DF;text-decoration:none;opacity:.85}
-.demobar a:hover{opacity:1;text-decoration:underline}
-.demobar .concept{color:#C2A353}
-.demobar .links{display:flex;gap:14px;flex-wrap:wrap}
-.sheet{max-width:980px;margin:26px auto;background:var(--cream);box-shadow:0 16px 44px rgba(23,24,28,.18);padding:40px 46px 44px}
-h1,h2,h3{font-family:"Playfair Display",Georgia,serif;font-weight:900;line-height:1.12}
-h1{font-size:clamp(28px,4.6vw,44px)}
-h2{font-size:clamp(22px,3.4vw,30px);margin-bottom:4px}
-.kick{font:800 10px/1 Archivo,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-deep)}
-.rule{border-top:3px double var(--gold);border-bottom:1px solid var(--gold);height:4px;margin:10px 0 22px}
-.section{margin-top:38px}
-.section>p.lead{font:500 13.5px/1.7 Archivo,sans-serif;color:var(--grey);max-width:74ch;margin-top:6px}
-/* wireframe primitives */
-.wire{background:#fff;border:2px solid #B9B4A6;border-radius:10px;padding:14px;margin-top:14px}
-.wire .wlabel{font:800 9.5px/1 Archivo,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8A8471;margin-bottom:8px}
-.row{display:grid;gap:10px}
-.box{border:2px dashed #A9B7DE;border-radius:8px;background:#EEF2FD;padding:12px 14px;position:relative;min-height:56px}
-.box.solid{border-style:solid;border-color:var(--navy);background:#E9EDF8}
-.box.gold{border-color:var(--gold);background:#FBF4E2}
-.box.red{border-color:var(--red);background:#FCEEF0}
-.box.grey{border-color:#B9B4A6;background:#F1F0EB}
-.box .n{position:absolute;top:-10px;left:10px;background:var(--navy);color:#fff;font:800 9.5px/1 Archivo,sans-serif;padding:5px 8px;border-radius:20px}
-.box .t{font:800 12px/1.4 Archivo,sans-serif;letter-spacing:.04em;text-transform:uppercase}
-.box .d{font:500 11.5px/1.55 Archivo,sans-serif;color:var(--grey);margin-top:4px}
-.notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:14px}
-.note{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px 16px}
-.note b{display:block;font:800 11px/1.5 Archivo,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);margin-bottom:6px}
-.note li{margin-left:16px;font-size:12.5px;color:#3E4152;margin-top:3px}
-.sitemap{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:14px}
-.sm{background:#fff;border:1px solid var(--line);border-top:4px solid var(--navy);border-radius:6px;padding:12px 14px}
-.sm b{font:800 12px/1.4 Archivo,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--navy)}
-.sm span{display:block;font:500 11.5px/1.55 Archivo,sans-serif;color:var(--grey);margin-top:4px}
-.sm.alt{border-top-color:var(--gold)}
-.sm.cta{border-top-color:var(--red)}
-.field{display:flex;gap:10px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:6px;padding:9px 12px;margin-top:8px;font-size:12.5px}
-.field .req{color:var(--red);font-weight:700}
-.field .fake{flex:1;height:16px;background:var(--mist);border:1px dashed #C9C3B4;border-radius:4px}
-.btnwire{display:inline-block;background:var(--navy);color:#fff;font:700 10.5px/1 Archivo,sans-serif;letter-spacing:.16em;text-transform:uppercase;padding:12px 18px;border-radius:6px;margin-top:12px}
-.cmp{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-top:14px}
-.cmp .c{border-radius:10px;padding:16px;color:#fff}
-.cmp .c b{display:block;font:900 17px/1.25 "Playfair Display",serif}
-.cmp .c span{font:600 11px/1.6 Archivo,sans-serif;opacity:.92}
-.cmp .c a{display:inline-block;margin-top:8px;font:800 10.5px/1 Archivo,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#fff;text-decoration:underline}
-@media(max-width:740px){.sheet{padding:26px 18px 32px;margin:12px}}
+:root{--navy:#101E45;--royal:#1739C9;--crimson:#A3192E;--gold:#D9A269;--gold-ink:#8F5A1C;--ink:#1C2333;--grey:#6E7385;--line:#E4DCC8;--ivory:#FAF9F4}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink);font:16.5px/1.75 Lora,Georgia,serif;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--navy)}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;margin:0;line-height:1.12}
+.kick{font:800 11.5px/1.5 Archivo,sans-serif;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-ink)}
+.samp{font:800 10px/1 Archivo,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--grey);padding:5px 8px;white-space:nowrap}
+.ph{font:700 12px/1.4 Archivo,sans-serif;color:#A3192E;border-bottom:1px dashed #A3192E}
+.cap{font:400 12.5px/1.55 Archivo,sans-serif;color:var(--grey);margin-top:8px}
+.cap .imgnote{font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:10px;color:var(--navy);background:#EDE3C8;padding:2px 6px}
+.topbar{position:sticky;top:0;z-index:50;background:var(--navy);color:#fff;display:flex;justify-content:space-between;gap:14px;align-items:center;padding:9px 20px;font:800 11.5px/1.4 Archivo,sans-serif;letter-spacing:.16em;text-transform:uppercase;flex-wrap:wrap}
+.topbar a{color:var(--gold);text-decoration:none}
+.notice{background:var(--ivory);border-bottom:1px solid var(--line);font:400 13.5px/1.6 Archivo,sans-serif;padding:11px 20px;color:#4A4F60}
+.notice b{color:var(--navy);text-transform:uppercase;letter-spacing:.1em;font-size:12px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.sitenav{border-bottom:1px solid var(--line);padding:16px 0;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+.sitenav .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.sitenav .brand img{width:58px;height:auto}
+.sitenav .brand b{font:900 20px/1.1 "Playfair Display",serif;color:var(--navy)}
+.sitenav .brand span{display:block;font:800 9.5px/1.5 Archivo,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.sitenav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.sitenav ul a{font:800 12px/1.4 Archivo,sans-serif;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--ink)}
+.sitenav ul a:hover{color:var(--gold)}
+.sitenav .cta{background:var(--gold);color:#241C07;padding:12px 18px;text-decoration:none;font:800 12px/1 Archivo,sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.hero{position:relative;min-height:520px;display:flex;align-items:flex-end;overflow:hidden;background:var(--navy);border-bottom:4px solid var(--royal)}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+.hero .htext{position:relative;z-index:2;padding:56px 0 46px;color:#fff}
+.hero .htext h1{font-size:clamp(38px,6vw,64px);margin-top:10px;color:#fff}
+.hero .htext p{font-size:18px;line-height:1.75;max-width:640px;color:#E7E2D4}
+.hero .cta{display:inline-block;background:var(--gold);color:#241C07;text-decoration:none;font:800 12.5px/1 Archivo,sans-serif;letter-spacing:.18em;text-transform:uppercase;padding:17px 28px;margin-top:8px}
+.hero .cta.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.7);margin-left:10px}
+section.block{padding:54px 0;border-bottom:1px solid var(--line)}
+.blockhead{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;border-bottom:3px solid var(--navy);padding-bottom:12px;margin-bottom:24px}
+.blockhead h2{font-size:clamp(24px,3vw,32px)}
+.blockhead a{font:800 11.5px/1.4 Archivo,sans-serif;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--gold-ink)}
+.hero .kick{color:var(--gold)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{border:1px solid var(--line);background:#FCFAF4;padding:0 0 18px}
+.card img{height:160px;width:100%;object-fit:cover}
+.card .cbody{padding:16px 16px 0}
+.card .kick{font-size:10.5px}
+.card b{display:block;font:900 18px/1.3 "Playfair Display",serif;margin:7px 0 6px}
+.card span{font:400 14px/1.6 Archivo,sans-serif;color:#4A4F60}
+.card a{display:inline-block;margin-top:10px;font:800 11px/1 Archivo,sans-serif;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--navy);border-bottom:2px solid var(--gold);padding-bottom:3px}
+.strux{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.strux .sbox{border:1px solid var(--line);padding:22px}
+.strux .sbox h3{font-size:20px;margin-bottom:10px}
+.strux ul{margin:0;padding-left:18px}
+.strux li{font:400 14.5px/1.8 Archivo,sans-serif;color:#4A4F60}
+.strux .ph{font-size:11.5px}
+.article{border:1px solid var(--line);padding:34px;max-width:760px;margin:0 auto;background:#fff}
+.article .crumb{font:800 11px/1.5 Archivo,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--grey)}
+.article h3{font-size:clamp(26px,3.4vw,36px);margin:10px 0 8px}
+.article .meta{font:600 13px/1.6 Archivo,sans-serif;color:var(--grey);border-bottom:1px solid var(--line);padding-bottom:14px}
+.article .dek{font:italic 400 19px/1.7 Lora,serif;color:var(--navy);margin:18px 0 4px}
+.article p{font-size:16.5px;line-height:1.8}
+.article .srcbox{background:var(--ivory);border-left:4px solid var(--crimson);padding:14px 16px;font:400 13.5px/1.7 Archivo,sans-serif;margin-top:20px}
+.article .srcbox b{color:var(--navy)}
+footer.site{background:var(--navy);color:#DDD8CA;padding:48px 0 34px;margin-top:10px}
+footer.site .fgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:30px}
+footer.site h4{font:800 11.5px/1.5 Archivo,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin:0 0 14px}
+footer.site ul{list-style:none;margin:0;padding:0}
+footer.site li{font:400 14.5px/2 Archivo,sans-serif}
+footer.site a{color:#DDD8CA;text-decoration:none}
+footer.site a:hover{color:var(--gold)}
+footer.site .fbrand b{display:block;font:900 24px/1.2 "Playfair Display",serif;color:#fff}
+footer.site .fbrand span{font:800 10.5px/1.8 Archivo,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+footer.site .legal{border-top:1px solid rgba(255,255,255,.2);margin-top:32px;padding-top:18px;font:400 12.5px/1.8 Archivo,sans-serif;color:#A9A496}
+footer.site .legal .ph{color:#F0C9A0;border-color:#F0C9A0}
+.pgnav{position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(16,30,69,.97);display:flex;justify-content:center;gap:10px;align-items:center;padding:10px 14px;flex-wrap:wrap}
+.pgnav a{font:800 10.5px/1 Archivo,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#fff;border:1px solid rgba(255,255,255,.5);padding:9px 15px;text-decoration:none}
+.pgnav a:hover{background:var(--gold);border-color:var(--gold);color:#241C07}
+.pgnav .count{font:800 10.5px/1 Archivo,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);padding:0 8px}
+@media(max-width:900px){
+.cards,.strux,footer.site .fgrid{grid-template-columns:1fr}
+.hero .htext{padding:44px 0 36px}
+.article{padding:24px 18px}
+}
 </style>
 </head>
 <body>
-<nav class="demobar">
-<a href="index.html">← All concepts</a>
-<span class="concept">Website Framework</span>
-<span class="links"><a href="concept-1-premium-editorial.html">01 Editorial</a><a href="concept-2-modern-bold.html">02 Bold</a><a href="concept-3-inspirational.html">03 Inspirational</a><a href="concept-4-luxury-showcase.html">04 Luxury</a><a href="newsletters.html">Newsletters</a></span>
-</nav>
-<div class="sheet">
-<header>
-<div class="kick">Heroes &amp; Sheros Magazine · Website Blueprint</div>
-<h1>Website Framework &amp; Information Architecture</h1>
-<div class="rule"></div>
-<p class="lead" style="font:500 13.5px/1.75 Archivo,sans-serif;color:var(--grey);max-width:78ch">The site is built as a clean online magazine — not one long document. This blueprint maps every page, section and template from the client’s content master, ready to be skinned with any of the four visual directions (or a hybrid).</p>
+<header class="topbar">
+<a href="index.html">Heroes &amp; Sheros | Presentation hub</a>
+<span>Website framework | Home, sections, article</span>
+<a href="index.html">All concepts</a>
 </header>
+<div class="notice"><b>Design review mockup:</b> site copy is sample text built on the client's content master; facts are sourced, quotes marked "sample" await sign-off. Photography is licensed stock standing in for the client's permission-cleared images.</div>
 
-<section class="section">
-<h2>1 · Sitemap — the eight main pages</h2>
-<p class="lead">Navigation stays simple and visible on desktop and mobile: eight items, no nesting.</p>
-<div class="sitemap">
-<div class="sm"><b>Home</b><span>Hero banner → mission → featured hero → organization → stories → CTA → podcast → footer</span></div>
-<div class="sm"><b>About Us</b><span>Mission, motto, what we cover, editorial standard, CTA</span></div>
-<div class="sm"><b>Heroes &amp; Sheros</b><span>Honoree directory — card grid by category</span></div>
-<div class="sm alt"><b>Heroic Organizations</b><span>Organization profiles — mission, initiatives, donate link</span></div>
-<div class="sm"><b>Latest Stories</b><span>Archive — 6–12 article cards, categories, read more</span></div>
-<div class="sm cta"><b>Submit a Hero or Shero</b><span>Nomination form + permission notice (main CTA)</span></div>
-<div class="sm alt"><b>Heroic Hearts Podcast</b><span>Coming-soon page → episode archive later</span></div>
-<div class="sm"><b>Contact</b><span>Email, phone, social, mailing address, form CTA</span></div>
+<div class="wrap">
+<nav class="sitenav">
+<a class="brand" href="#top">
+<img src="assets/hh-logo-web.png" alt="Heroes and Sheros HH diamond logo">
+<b>Heroes &amp; Sheros<span>Giving Honor Where Honor Is Due</span></b>
+</a>
+<ul>
+<li><a href="#stories">Stories</a></li>
+<li><a href="#honorees">Honorees</a></li>
+<li><a href="#nominate">Nominate</a></li>
+<li><a href="#podcast">Podcast</a></li>
+<li><a href="#article">Article template</a></li>
+</ul>
+<a class="cta" href="#nominate">Nominate a hero</a>
+</nav>
 </div>
-<div class="notes">
-<div class="note"><b>Article template (dynamic)</b><li>/article/&lt;slug&gt; pages created from one template</li><li>Categories: Heroes &amp; Sheros · Heroic Organizations</li></div>
-<div class="note"><b>Global chrome</b><li>Header: logo + 8-item nav (sticky on scroll)</li><li>Motto directly under logo or in hero banner</li><li>Footer: links · contact · social · Privacy · Terms</li></div>
+
+<header class="hero" id="top">
+<img src="assets/img/cover-community.jpg" alt="Volunteers gathering outdoors on a clear morning">
+<div class="wrap">
+<div class="htext">
+<div class="kick">Heroes &amp; Sheros Magazine</div>
+<h1>People who make a difference deserve to be seen, heard, and honored.</h1>
+<p>An online magazine honoring individuals, organizations, families, professionals and everyday people whose actions show compassion, courage, service or perseverance. Paper edition January 2027.</p>
+<a class="cta" href="#stories">Read Issue 01</a>
+<a class="cta ghost" href="#nominate">Nominate a hero or shero</a>
+</div>
+</div>
+</header>
+<div class="wrap">
+
+<section class="block" id="stories">
+<div class="blockhead"><h2>Stories from Issue 01</h2><a href="concept-1-premium-editorial.html">Open the issue</a></div>
+<div class="cards">
+<div class="card">
+<img src="assets/img/church.jpg" alt="A white chapel under a bright sky">
+<div class="cbody">
+<div class="kick">Cover Story</div>
+<b>Serving the most vulnerable</b>
+<span>The Tim Tebow Foundation's work against trafficking in three parts: prevent, rescue, care.</span>
+<a href="concept-1-premium-editorial.html">Read the story</a>
+</div>
+</div>
+<div class="card">
+<img src="assets/img/homes.jpg" alt="A freshly painted house with workers outside">
+<div class="cbody">
+<div class="kick">Hero &amp; Shero</div>
+<b>The block behind the ribbon</b>
+<span>Intrada Westside: 143 affordable homes, 25 supportive units, one November morning.</span>
+<a href="concept-1-premium-editorial.html">Read the story</a>
+</div>
+</div>
+<div class="card">
+<img src="assets/img/interview-notes.jpg" alt="Two people taking notes at a table during an interview">
+<div class="cbody">
+<div class="kick">The Interview</div>
+<b>Fostering the Future</b>
+<span>What the official record shows about the order of November 2025 and the accounts of June 2026.</span>
+<a href="concept-1-premium-editorial.html">Read the story</a>
+</div>
+</div>
+</div>
+<div class="cap">Story cards link to the article template below. Images are layout stock pending the honoree shoot.</div>
+</section>
+
+<section class="block" id="honorees">
+<div class="blockhead"><h2>Honoree index</h2><a href="#nominate">Nominate someone</a></div>
+<div class="strux">
+<div class="sbox">
+<h3>How a honoree page reads</h3>
+<ul>
+<li>Name, one-line role, and the city they serve.</li>
+<li>A verified biography in three paragraphs, with dates checked against public record.</li>
+<li>The nominator's story, published only with permission and a contact trail.</li>
+<li>Portrait with credit and usage permission noted in the caption.</li>
+</ul>
+</div>
+<div class="sbox">
+<h3>Editorial rules on the page</h3>
+<ul>
+<li>No honoree is published before the editorial office confirms the facts.</li>
+<li>Corrections run on the page, dated, with the old wording archived.</li>
+<li>Current political figures appear as factual reporting with sourcing, without endorsement.</li>
+<li>Any quote awaiting sign-off stays marked <span class="samp">Sample</span> in mockups.</li>
+</ul>
+</div>
 </div>
 </section>
 
-<section class="section">
-<h2>2 · Homepage wireframe (recommended flow)</h2>
-<p class="lead">Nine numbered blocks — feature selected stories and link to the archive; do not overload the homepage.</p>
-<div class="wire">
-<div class="wlabel">Header — logo + navigation</div>
-<div class="row" style="grid-template-columns:220px 1fr">
-<div class="box solid"><span class="t">Logo lockup</span><div class="d">HH mark + “Heroes &amp; Sheros” + motto beneath</div></div>
-<div class="box"><span class="t">Primary nav</span><div class="d">Home · About · Heroes &amp; Sheros · Organizations · Latest Stories · Submit · Podcast · Contact</div></div>
+<section class="block" id="nominate">
+<div class="blockhead"><h2>Nominate a hero or shero</h2><a href="newsletters.html">See the nominations email</a></div>
+<div class="strux">
+<div class="sbox">
+<h3>The form asks four things</h3>
+<ul>
+<li>The nominee's name, role and city.</li>
+<li>What they did, in your own words, with a date if you remember one.</li>
+<li>How you know them, and how the editorial office can reach you.</li>
+<li>Whether we may publish your name as the nominator.</li>
+</ul>
 </div>
-<div class="wire" style="border-style:dashed">
-<div class="wlabel">Hero banner</div>
-<div class="box red"><span class="n">1</span><span class="t">Magazine name · motto · Nominate button</span><div class="d">“A magazine dedicated to recognizing heroic hearts… ” · [NOMINATE A HERO OR SHERO →] · [READ OUR LATEST STORIES →] · honors-style key art (child-in-wheelchair hero imagery included per editorial direction)</div></div>
+<div class="sbox">
+<h3>What happens next</h3>
+<ul>
+<li>The editorial office reviews every nomination before anything is published.</li>
+<li>We contact the nominee before a word runs. <span class="ph">form and confirmation flow to confirm</span></li>
+<li>Published honorees appear in the issue index and stay in the archive.</li>
+</ul>
 </div>
-<div class="row" style="grid-template-columns:1fr 1fr">
-<div class="box"><span class="n">2</span><span class="t">Welcome — mission statement</span><div class="d">“People who make a difference deserve to be seen, heard, and honored.” + what we cover list</div></div>
-<div class="box gold"><span class="n">3</span><span class="t">Featured Hero / Shero — large card</span><div class="d">Photo · category · teaser · [READ THE FULL STORY →]</div></div>
-</div>
-<div class="row" style="grid-template-columns:1fr 1fr">
-<div class="box gold"><span class="n">4</span><span class="t">Heroic Organization of the Week</span><div class="d">Logo/photo · short intro · [LEARN MORE →]</div></div>
-<div class="box"><span class="n">5</span><span class="t">Latest Stories — 3 or 6 cards</span><div class="d">Featured image · category · headline · 2-line excerpt · date · Read More</div></div>
-</div>
-<div class="box red"><span class="n">6</span><span class="t">Share a story — strong CTA section</span><div class="d">“Know someone with a heroic heart?” · one button color site-wide · [SUBMIT A HERO OR SHERO →]</div></div>
-<div class="box gold"><span class="n">7</span><span class="t">Podcast teaser — Heroic Hearts</span><div class="d">“Coming soon” panel (TV/graphic treatment) · [VISIT THE PODCAST PAGE →]</div></div>
-<div class="box solid"><span class="n">8</span><span class="t">Footer</span><div class="d">Motto · celebrating line · About · Latest Stories · Submit · Podcast · Contact · Privacy · Terms · social</div></div>
-<div class="box grey"><span class="n">9</span><span class="t">Optional: search + newsletter capture</span><div class="d">Add a search box once the story archive grows; email capture for issues + podcast drops</div></div>
-<span class="btnwire">Single CTA color site-wide — one strong button color</span>
-</div>
-</section>
-<section class="section">
-<h2>3 · Article page template (used for every story)</h2>
-<p class="lead">One reusable template — header, body modules, footer actions. Social share buttons on every article.</p>
-<div class="wire">
-<div class="row" style="grid-template-columns:1fr">
-<div class="box gold"><span class="t">A · Article header</span><div class="d">Large hero image → category label → headline → short deck → byline → published date (single H1 per page)</div></div>
-</div>
-<div class="row" style="grid-template-columns:1.4fr .6fr">
-<div class="box"><span class="t">B · Article body</span><div class="d">Opening paragraph · short subheadings · pull quote / highlighted fact · photo captions · official external link (verified URL) · related stories</div></div>
-<div class="box grey"><span class="t">C · Sidebar</span><div class="d">Fact file · category chips · “Related honors” · share block</div></div>
-</div>
-<div class="box solid"><span class="t">D · Article footer actions</span><div class="d">[SHARE THIS STORY] · [SUBMIT YOUR OWN HERO STORY] · [READ MORE STORIES]</div></div>
-</div>
-<div class="notes">
-<div class="note"><b>Editorial rules baked into the template</b><li>Verify names, dates, numbers and claims before publishing</li><li>Public officials: factual, sourced, non-endorsing</li><li>No Word-template filler (Page XX, fake captions, fake dates)</li></div>
-<div class="note"><b>Image alt text convention</b><li>“T.I. at Intrada Westside affordable housing ribbon cutting” — never “IMG_1234”</li></div>
 </div>
 </section>
 
-<section class="section">
-<h2>4 · Directory pages — Heroes &amp; Sheros + Heroic Organizations</h2>
-<div class="notes">
-<div class="note" style="grid-column:1/-1;padding:18px">
-<b>Heroes &amp; Sheros — honoree card (repeated grid)</b>
-<div class="wire" style="margin-top:8px">
-<div class="row" style="grid-template-columns:120px 1fr">
-<div class="box grey"><span class="t">Photo</span></div>
-<div class="box"><span class="t">Name · Category · Location (optional)</span><div class="d">One-sentence reason for recognition → [READ MORE]</div></div>
+<section class="block" id="podcast">
+<div class="blockhead"><h2>Heroic Hearts podcast</h2><a href="newsletters.html">Launch note edition</a></div>
+<div class="strux">
+<div class="sbox">
+<h3>Coming soon</h3>
+<ul>
+<li>A companion audio series recorded after the print interview ends.</li>
+<li>Guest list, schedule and subscription links announced with Issue 02.</li>
+<li>Episodes carry the same sourcing rules as the articles.</li>
+</ul>
 </div>
-<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
-<span class="box" style="min-height:0;padding:8px 12px"><span class="t" style="font-size:10.5px">Community Hero</span></span>
-<span class="box" style="min-height:0;padding:8px 12px"><span class="t" style="font-size:10.5px">First Responder</span></span>
-<span class="box" style="min-height:0;padding:8px 12px"><span class="t" style="font-size:10.5px">Educator</span></span>
-<span class="box" style="min-height:0;padding:8px 12px"><span class="t" style="font-size:10.5px">Veteran</span></span>
-<span class="box" style="min-height:0;padding:8px 12px"><span class="t" style="font-size:10.5px">Mentor</span></span>
-<span class="box" style="min-height:0;padding:8px 12px"><span class="t" style="font-size:10.5px">Caregiver</span></span>
-<span class="box" style="min-height:0;padding:8px 12px"><span class="t" style="font-size:10.5px">Youth Hero</span></span>
-<span class="box" style="min-height:0;padding:8px 12px"><span class="t" style="font-size:10.5px">Advocate</span></span>
-<span class="box" style="min-height:0;padding:8px 12px"><span class="t" style="font-size:10.5px">Researcher</span></span>
-<span class="box" style="min-height:0;padding:8px 12px"><span class="t" style="font-size:10.5px">Volunteer</span></span>
-<span class="box" style="min-height:0;padding:8px 12px"><span class="t" style="font-size:10.5px">Philanthropist</span></span>
-<span class="box" style="min-height:0;padding:8px 12px"><span class="t" style="font-size:10.5px">Family Hero</span></span>
-<span class="box" style="min-height:0;padding:8px 12px"><span class="t" style="font-size:10.5px">Other</span></span>
+<div class="sbox">
+<h3>Where it lives</h3>
+<ul>
+<li>A podcast page under Media, with episodes, transcripts and credits.</li>
+<li>Apple, Spotify and YouTube feeds <span class="ph">links to confirm at launch</span>.</li>
+<li>Back issues linked from every episode show note.</li>
+</ul>
 </div>
-</div>
-</div>
-<div class="note"><b>Heroic Organization profile</b><li>Name + logo</li><li>Short mission statement</li><li>What the organization does</li><li>Current / notable initiative</li><li>Photos</li><li>[OFFICIAL WEBSITE] button</li><li>Optional [DONATE] button → official donation page</li></div>
-<div class="note"><b>First cards for Latest Stories</b><li>Tim Tebow Foundation — Serving the Most Vulnerable</li><li>T.I. &amp; Tiny Harris — Community and Affordable Housing</li><li>Melania Trump — Fostering the Future and Foster Youth</li></div>
 </div>
 </section>
-<section class="section">
-<h2>5 · Submit a Hero or Shero — form framework</h2>
-<p class="lead">The site’s main conversion. Every field from the client content master, in order:</p>
-<div class="wire">
-<div class="row" style="grid-template-columns:1fr 1fr">
+<section class="block" id="article">
+<div class="blockhead"><h2>Article template</h2><a href="#top">Back to top</a></div>
+<article class="article">
+<div class="crumb">Stories / Cover Story / Issue 01</div>
+<h3>Serving the most vulnerable</h3>
+<div class="meta">Heroes &amp; Sheros staff | Sourced from the foundation's public record | <span class="samp">Sample copy</span></div>
+<p class="dek">Founded in 2010, the Tim Tebow Foundation describes its mission as bringing faith, hope and love to people facing some of the darkest times in their lives.</p>
+<p>Every article on the site follows one shape: a headline that names the subject, a byline with the reporting basis, a standfirst that states the verified fact, then the story in full. Images carry captions with credit and permission status, and the piece ends with its sources in a box readers can check.</p>
+<p>The template keeps politics on the factual side of the line. Stories about current political figures run as reporting with clear sourcing and no endorsement, and corrections appear dated on the same page.</p>
+<div class="srcbox"><b>Sources:</b> Tim Tebow Foundation official site; The White House releases of November 2025 and June 2026; Atlanta Housing records on Intrada Westside. <span class="ph">live links to confirm at launch</span></div>
+</article>
+<div class="cap" style="max-width:760px;margin:14px auto 0">Full-page article view, with related stories and share row below the sources box at launch.</div>
+</section>
+
+</div>
+
+<footer class="site">
+<div class="wrap">
+<div class="fgrid">
+<div class="fbrand">
+<b>Heroes &amp; Sheros</b>
+<span>Giving Honor Where Honor Is Due</span>
+<p style="font:400 14.5px/1.8 Archivo,sans-serif;margin-top:14px">An online magazine honoring individuals, organizations, families, professionals and everyday people. Paper edition January 2027.</p>
+</div>
 <div>
-<div class="field">Your Name <span class="req">*</span><span class="fake"></span></div>
-<div class="field">Your Email <span class="req">*</span><span class="fake"></span></div>
-<div class="field">Your Phone (optional)<span class="fake"></span></div>
-<div class="field">Name of Hero/Shero <span class="req">*</span><span class="fake"></span></div>
-<div class="field">Category <span class="req">*</span><span class="fake"></span></div>
-<div class="field">City / State / Country<span class="fake"></span></div>
+<h4>Read</h4>
+<ul>
+<li><a href="concept-1-premium-editorial.html">Issue 01: The Honors Edition</a></li>
+<li><a href="website-framework.html#stories">Stories</a></li>
+<li><a href="website-framework.html#honorees">Honoree index</a></li>
+<li><a href="website-framework.html#article">Article template</a></li>
+</ul>
 </div>
 <div>
-<div class="field">Tell us their story <span class="req">*</span><span class="fake" style="height:52px"></span></div>
-<div class="field">Why honor them? <span class="req">*</span><span class="fake" style="height:40px"></span></div>
-<div class="field">Organization / employer<span class="fake"></span></div>
-<div class="field">Website / social link<span class="fake"></span></div>
-<div class="field">Upload photo(s) <span class="req">*</span><span class="fake"></span></div>
-<div class="field">How did you hear about us?<span class="fake"></span></div>
+<h4>Take part</h4>
+<ul>
+<li><a href="website-framework.html#nominate">Nominate a hero or shero</a></li>
+<li><a href="newsletters.html">Newsletters</a></li>
+<li><a href="website-framework.html#podcast">Heroic Hearts podcast</a></li>
+<li>Editorial office: <span class="ph">contact email to confirm</span></li>
+</ul>
 </div>
 </div>
-<div class="box red" style="margin-top:12px"><span class="t">Submission permission notice</span><div class="d">“By submitting this story and/or photograph, you confirm that you have the right to provide the material and authorize Heroes &amp; Sheros Magazine to review, edit, publish, display and promote the submitted material. Submission does not guarantee publication. The magazine may contact you for clarification, permissions, or additional information.”</div></div>
-<span class="btnwire">[Submit Story] → confirmation email + editor review queue</span>
+<div class="legal">
+<b>Heroes &amp; Sheros Magazine</b> | heroesandsheros.com | Premiere Issue 2026<br>
+Photography in this mockup is licensed stock for layout only. Facts checked against the client's content master and cited sources.<br>
+Corrections policy: dated notes on the article page, with the original wording archived.
 </div>
-</section>
+</div>
+</footer>
 
-<section class="section">
-<h2>6 · Podcast &amp; Contact page frameworks</h2>
-<div class="notes">
-<div class="note"><b>Heroic Hearts Podcast page</b><li>Headline: “The story does not have to end when the article is published.”</li><li>Status: COMING SOON panel (TV-graphic treatment — “Heroic Hearts podcast coming soon”)</li><li>Blurb: conversations with honored people &amp; organizations, with participation and permission</li><li>[LISTEN / WATCH — link TBC]</li><li>[NOMINATE A FUTURE GUEST]</li><li>Later: episode archive, player, transcript, platforms</li></div>
-<div class="note"><b>Contact page</b><li>“Questions, story ideas, partnership proposals, media requests, or nominations”</li><li>Email: [ADD OFFICIAL EMAIL]</li><li>Phone: [ADD OFFICIAL PHONE — OPTIONAL]</li><li>Social: [ADD OFFICIAL SOCIAL LINKS]</li><li>Mailing address: [ADD ADDRESS — OPTIONAL]</li><li>[SUBMIT A HERO OR SHERO →]</li></div>
-<div class="note"><b>About Us page</b><li>Final copy from the content master (mission + motto)</li><li>What we cover: firefighters, teachers, law officers, veterans, foster families, children’s hospitals, researchers, donations &amp; initiatives, positive news</li><li>Editorial standard &amp; verification promise</li><li>CTA: “Have a story that deserves to be honored?”</li></div>
-</div>
-</section>
-<section class="section">
-<h2>7 · Responsive, behavior &amp; SEO notes</h2>
-<div class="notes">
-<div class="note"><b>Responsive rules</b><li>Desktop: 12-col grid, generous white space; magazine feel</li><li>Tablet: cards to 2-col; hero art stays full-bleed</li><li>Mobile: single column; sticky header with menu button; big tap targets</li><li>Check mobile view before launch (release checklist)</li></div>
-<div class="note"><b>SEO / page settings</b><li>Home: “Heroes &amp; Sheros Magazine | Giving Honor Where Honor Is Due”</li><li>Submit: “Submit a Hero or Shero | Heroes &amp; Sheros Magazine”</li><li>Podcast: “Heroic Hearts Podcast | Heroes &amp; Sheros Magazine”</li><li>One clear H1 per page · descriptive image alt text</li></div>
-<div class="note"><b>Design direction (from the content master)</b><li>Polished, warm, uplifting and editorial — not a generic template</li><li>Logo prominent; motto directly beneath it</li><li>Large high-quality photos, short readable paragraphs</li><li>Consistent article cards + category labels</li><li>One strong CTA color throughout</li><li>Simple visible nav; generous white space</li></div>
-</div>
-</section>
-
-<section class="section">
-<h2>8 · Pre-launch checklist</h2>
-<div class="wire">
-<div class="row" style="grid-template-columns:1fr 1fr">
-<div class="box grey"><span class="t">Content</span><div class="d">Replace every [ADD EMAIL] / [ADD PHONE] / [ADD SOCIAL] / [ADD PODCAST LINK] placeholder · upload final logo + consistent header treatment · correct hero photo per article · no Word-template filler</div></div>
-<div class="box grey"><span class="t">Structure</span><div class="d">Create the eight main navigation pages · article pages from the template · categories for Heroes &amp; Sheros and Heroic Organizations · turn all “CLICK HERE” text into real buttons</div></div>
-<div class="box grey"><span class="t">Trust &amp; legal</span><div class="d">Verify every external link · get photo/publication permissions where required · fact-check names, dates, numbers, claims · political stories stay factual and sourced · Privacy Policy + Terms · clear editorial email</div></div>
-<div class="box grey"><span class="t">QA</span><div class="d">Test every form and button · check mobile view · add search once the archive grows · create a backup/export before major changes</div></div>
-</div>
-</div>
-</section>
-
-<section class="section">
-<h2>9 · Skin the framework with your chosen direction</h2>
-<p class="lead">The structure above stays the same for every direction — pick one and the templates inherit its typography, palette and image treatment.</p>
-<div class="cmp">
-<div class="c" style="background:#101D45"><b>01 · Premium Editorial</b><span>Playfair + Lora · ivory/navy/gold · print-publication elegance</span><a href="concept-1-premium-editorial.html">Open concept →</a></div>
-<div class="c" style="background:#1E4FD6"><b>02 · Modern &amp; Bold</b><span>Anton + Bangers · blue/red/gold · MEGA magazine energy</span><a href="concept-2-modern-bold.html">Open concept →</a></div>
-<div class="c" style="background:#C96F4A"><b>03 · Inspirational</b><span>Fraunces + Nunito · warm cream/clay · human-centered, portrait-first</span><a href="concept-3-inspirational.html">Open concept →</a></div>
-<div class="c" style="background:#0C1533"><b>04 · Luxury Showcase</b><span>Cormorant + Montserrat · navy/gold · sponsor-ready polish</span><a href="concept-4-luxury-showcase.html">Open concept →</a></div>
-</div>
-<div style="margin-top:14px"><a class="btnwire" href="newsletters.html">See the 4 newsletter concepts →</a> <a class="btnwire" href="index.html" style="background:var(--gold-deep)">Back to hub →</a></div>
-</section>
-
-<div style="margin-top:40px;border-top:1px solid var(--line);padding-top:16px;font:600 10.5px/1.9 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#8A8471">
-Heroes &amp; Sheros Magazine · Giving Honor Where Honor Is Due · Framework derived from the client’s Complete Website Content &amp; Build Master · Paula Skipper Peeples — Chief Editor · Mark Peeples — Co-Founder &amp; Magazine Spokesman
-</div>
-</div>
+<nav class="pgnav" aria-label="Presentation navigation">
+<span class="count">Website framework</span>
+<a href="index.html">Presentation hub</a>
+<a href="concept-1-premium-editorial.html">Concept 1</a>
+<a href="newsletters.html">Newsletters</a>
+</nav>
 </body>
 </html>
